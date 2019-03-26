@@ -1,7 +1,3 @@
 //This is the initialTest - Justina
 //e
-// This is cool! Let's rock this
-
-
-
-HI GUYS :):):)
+// This is cool! Let's rock this - You Jin Song
