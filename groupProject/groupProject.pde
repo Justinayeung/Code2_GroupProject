@@ -15,30 +15,32 @@ int Gramercy_Murray;
 int Greenwich_Soho;
 int Union_LowerE;
 int Lower_Manhattan;
-
-
+//________________________________________________Health
 float xPos;
 float yPos;
 int boxSize = 20;
 boolean locked = false;
 float xOffset = 0.0; 
 float yOffset = 0.0; 
-ArrayList<Pollution> pollution;
 PImage body;
+
 PImage NYMap;
+
+//________________________________________________Pollution
+ArrayList<Pollution> pollution;
+
 
 
 void setup() {
   size(1200, 750);
+  //________________________________________________Health
   xPos = width - width/10;
   yPos = height/10;
   rectMode(RADIUS); 
   noStroke();
-  pollution = new ArrayList<Pollution>();
-  //________________________________________________image
   body = loadImage("body.png");
   body.resize(100,150);
-  
+  //________________________________________________table
   airData = loadTable("Air_Quality.csv", "header");
   for(TableRow row : airData.rows())
   {
@@ -48,6 +50,9 @@ void setup() {
   }
   
   NYMap = loadImage("NYMap.png");
+
+  //________________________________________________Pollution
+  pollution = new ArrayList<Pollution>();
 }
 
 void draw() { 
