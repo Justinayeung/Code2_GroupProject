@@ -2,6 +2,21 @@
 //https://processing.org/tutorials/text/
 //https://github.com/Justinayeung/Code2_GroupProject/tree/master/groupProject/Particles
 
+Table airData;
+int bronx;
+int brooklyn;
+int queens;
+int central_harlem;
+int east_harlem;
+int upperW;
+int upperE;
+int Chelsea;
+int Gramercy_Murray;
+int Greenwich_Soho;
+int Union_LowerE;
+int Lower_Manhattan;
+
+
 float xPos;
 float yPos;
 int boxSize = 20;
@@ -18,6 +33,8 @@ void setup() {
   rectMode(RADIUS); 
   noStroke();
   pollution = new ArrayList<Pollution>();
+  
+  airData = loadTable("Air_Quality", "header");
 }
 
 void draw() { 
