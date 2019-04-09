@@ -33,11 +33,11 @@ ArrayList<Pollution> pollution;
 
 void setup() {
   size(1200, 750);
-  xPos = width + 40;
   //________________________________________________Health
   xPos = 100;
-  yPos = height/10;
+  yPos = height/2;
   rectMode(RADIUS); 
+  //rect(
   body = loadImage("body.png");
   body.resize(250, 400);
   //________________________________________________table
@@ -87,7 +87,7 @@ void setup() {
 void draw() { 
   background(220, 10, 100);
   fill(0);
-  image(body,xPos, yPos);
+  image(body,xPos, yPos - 300);
   Cross();
   image(NYMap, 450, 0, 750, 750);
   //rect(xPos, yPos, boxSize, boxSize * 2);
@@ -100,16 +100,22 @@ void draw() {
 }
 
 void Cross(){
+  //white box(decoration)
   fill(255);
   strokeWeight(15);
-  rect(xPos + 125, yPos + 260, 75, 75);
+  rect(xPos + 125, yPos - 30, 75, 75);
+  // cross
   fill(0);
   noStroke();
-  rect(xPos + 125, yPos + 250, 16, 40);
-  rect(xPos + 125, yPos + 250, 40, 16);
-  
+  rect(xPos + 125, yPos - 20, 16, 40);
+  rect(xPos + 125, yPos - 20, 40, 16);
+  //poles
   rect(70, height/2 + 15, 10, 350);
   rect(210, 45, 150, 9);
+  //a string
+  strokeWeight(3);
+  fill(0);
+  ellipse(xPos + 125, yPos - 310, 8, 40);
 }
 
 void mousePressed() {
