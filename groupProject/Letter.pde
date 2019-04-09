@@ -7,7 +7,6 @@ class Letter
   float velY;
   float life;
   float alpha;
-  float colorChange;
     
   Letter(float posX, float posY, char letter)
   {
