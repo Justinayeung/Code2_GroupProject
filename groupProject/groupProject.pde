@@ -25,6 +25,7 @@ float xOffset = 0.0;
 float yOffset = 0.0; 
 ArrayList<Pollution> pollution;
 PImage body;
+PImage NYMap;
 
 
 void setup() {
@@ -45,6 +46,8 @@ void setup() {
     String location = row.getString("location_");
     String type = row.getString("type_");
   }
+  
+  NYMap = loadImage("NYMap.png");
 }
 
 void draw() { 
@@ -57,6 +60,8 @@ void draw() {
     p.addLetters();
     p.drawLetters();
   }
+  
+  image(NYMap, 450, 0, 750, 750);
 }
 
 void Cross(){
