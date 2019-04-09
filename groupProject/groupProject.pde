@@ -40,14 +40,43 @@ void setup() {
   rectMode(RADIUS); 
   noStroke();
   body = loadImage("body.png");
-  body.resize(100,150);
+  body.resize(250, 400);
   //________________________________________________table
   airData = loadTable("Air_Quality.csv", "header");
   for(TableRow row : airData.rows())
   {
     int data = row.getInt("data_");
+    
     String location = row.getString("location_");
     String type = row.getString("type_");
+    
+    switch(location)
+    {
+      case "Bronx":
+        break;
+      case "Brooklyn":
+        break;
+      case "Queens":
+        break;
+      case "Central Harlem - Morningside Heights":
+        break;
+      case "East Harlem":
+        break;
+      case "Upper West Side":
+        break;
+      case "Upper East Side":
+        break;
+      case "Chelsea":
+        break;
+      case "Gramercy Park - Murray Hill":
+        break;
+      case "Greenwich Village - SoHo":
+        break;
+      case "Union Square - Lower East Side":
+        break;
+      case "Lower Manhattan":
+        break;
+    }
   }
   
   NYMap = loadImage("NYMap.png");
@@ -72,8 +101,8 @@ void draw() {
 }
 
 void Cross(){
-  rect(xPos + 50, yPos + 100, 8, 20);
-  rect(xPos + 50, yPos + 100, 20, 8);
+  rect(xPos + 125, yPos + 200, 8, 20);
+  rect(xPos + 125, yPos + 200, 20, 8);
 }
 
 void mousePressed() {
