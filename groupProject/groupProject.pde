@@ -38,7 +38,6 @@ void setup() {
   xPos = 100;
   yPos = height/10;
   rectMode(RADIUS); 
-  noStroke();
   body = loadImage("body.png");
   body.resize(250, 400);
   //________________________________________________table
@@ -101,8 +100,16 @@ void draw() {
 }
 
 void Cross(){
-  rect(xPos + 125, yPos + 200, 8, 20);
-  rect(xPos + 125, yPos + 200, 20, 8);
+  fill(255);
+  strokeWeight(15);
+  rect(xPos + 125, yPos + 260, 75, 75);
+  fill(0);
+  noStroke();
+  rect(xPos + 125, yPos + 250, 16, 40);
+  rect(xPos + 125, yPos + 250, 40, 16);
+  
+  rect(70, height/2 + 15, 10, 350);
+  rect(210, 45, 150, 9);
 }
 
 void mousePressed() {
