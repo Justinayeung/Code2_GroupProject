@@ -7,12 +7,13 @@ class Letter
   float velY;
   float life;
   float alpha;
+  float colorChange;
     
   Letter(float posX, float posY, char letter)
   {
     this.posX = posX + random(-2, 3);
     this.posY = posY + random(-40, 40);
-    this.velX = random(-0.5, 0.5);
+    this.velX = random(-1, 1);
     this.velY = random(-5, 0);
     this.letter = letter;
     life = 30;
