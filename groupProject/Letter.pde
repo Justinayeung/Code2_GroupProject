@@ -31,13 +31,5 @@ class Letter
     life = life - 0.5;
     this.posX += this.velX;
     this.posY += this.velY;
-
-    // check if it goes off
-    if (this.posX > width || this.posX < 0) {
-      this.velX *= -20;
-    }
-    if (this.posY > height || this.posY < 0) {
-      this.velY *= -20;
-    }
   }
 }
