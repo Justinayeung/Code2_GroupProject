@@ -34,11 +34,10 @@ void setup() {
   rectMode(RADIUS); 
   noStroke();
   pollution = new ArrayList<Pollution>();
-  
-<<<<<<< HEAD
+  //________________________________________________image
   body = loadImage("body.png");
   body.resize(100,150);
-=======
+  
   airData = loadTable("Air_Quality.csv", "header");
   for(TableRow row : airData.rows())
   {
@@ -46,7 +45,6 @@ void setup() {
     String location = row.getString("location_");
     String type = row.getString("type_");
   }
->>>>>>> 43a41ad14efa1844f2fff8f7dbd1fa93aa3f86c2
 }
 
 void draw() { 
