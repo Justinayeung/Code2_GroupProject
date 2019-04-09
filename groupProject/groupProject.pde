@@ -23,8 +23,12 @@ boolean locked = false;
 float xOffset = 0.0; 
 float yOffset = 0.0; 
 PImage body;
+
+PImage NYMap;
+
 //________________________________________________Pollution
 ArrayList<Pollution> pollution;
+
 
 
 void setup() {
@@ -73,6 +77,9 @@ void setup() {
         break;
     }
   }
+  
+  NYMap = loadImage("NYMap.png");
+
   //________________________________________________Pollution
   pollution = new ArrayList<Pollution>();
 }
@@ -87,6 +94,8 @@ void draw() {
     p.addLetters();
     p.drawLetters();
   }
+  
+  image(NYMap, 450, 0, 750, 750);
 }
 
 void Cross(){
