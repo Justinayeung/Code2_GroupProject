@@ -8,8 +8,9 @@ class Pollution
   PFont f;
   String message = "BRONX";
   Letter[] letter;
+  //Data
   
-  Pollution(float posX, float posY)
+  Pollution(float posX, float posY)//, float data)
   {
     this.posX = posX;
     this.posY = posY;

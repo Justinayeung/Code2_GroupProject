@@ -41,8 +41,37 @@ void setup() {
   for(TableRow row : airData.rows())
   {
     int data = row.getInt("data_");
+    
     String location = row.getString("location_");
     String type = row.getString("type_");
+    
+    switch(location)
+    {
+      case "Bronx":
+        break;
+      case "Brooklyn":
+        break;
+      case "Queens":
+        break;
+      case "Central Harlem - Morningside Heights":
+        break;
+      case "East Harlem":
+        break;
+      case "Upper West Side":
+        break;
+      case "Upper East Side":
+        break;
+      case "Chelsea":
+        break;
+      case "Gramercy Park - Murray Hill":
+        break;
+      case "Greenwich Village - SoHo":
+        break;
+      case "Union Square - Lower East Side":
+        break;
+      case "Lower Manhattan":
+        break;
+    }
   }
   //________________________________________________Pollution
   pollution = new ArrayList<Pollution>();
