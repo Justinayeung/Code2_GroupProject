@@ -2,6 +2,21 @@
 //https://processing.org/tutorials/text/
 //https://github.com/Justinayeung/Code2_GroupProject/tree/master/groupProject/Particles
 
+Table airData;
+int bronx;
+int brooklyn;
+int queens;
+int central_harlem;
+int east_harlem;
+int upperW;
+int upperE;
+int Chelsea;
+int Gramercy_Murray;
+int Greenwich_Soho;
+int Union_LowerE;
+int Lower_Manhattan;
+
+
 float xPos;
 float yPos;
 int boxSize = 20;
@@ -20,8 +35,18 @@ void setup() {
   noStroke();
   pollution = new ArrayList<Pollution>();
   
+<<<<<<< HEAD
   body = loadImage("body.png");
   body.resize(100,150);
+=======
+  airData = loadTable("Air_Quality.csv", "header");
+  for(TableRow row : airData.rows())
+  {
+    int data = row.getInt("data_");
+    String location = row.getString("location_");
+    String type = row.getString("type_");
+  }
+>>>>>>> 43a41ad14efa1844f2fff8f7dbd1fa93aa3f86c2
 }
 
 void draw() { 
