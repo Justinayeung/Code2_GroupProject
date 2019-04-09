@@ -23,8 +23,12 @@ boolean locked = false;
 float xOffset = 0.0; 
 float yOffset = 0.0; 
 PImage body;
+
+PImage NYMap;
+
 //________________________________________________Pollution
 ArrayList<Pollution> pollution;
+
 
 
 void setup() {
@@ -45,6 +49,9 @@ void setup() {
     String location = row.getString("location_");
     String type = row.getString("type_");
   }
+  
+  NYMap = loadImage("NYMap.png");
+
   //________________________________________________Pollution
   pollution = new ArrayList<Pollution>();
 }
@@ -60,6 +67,8 @@ void draw() {
     p.addLetters();
     p.drawLetters();
   }
+  
+  image(NYMap, 450, 0, 750, 750);
 }
 
 void Cross(){
