@@ -90,6 +90,7 @@ void draw() {
   fill(0);
   image(body,xPos, yPos);
   Cross();
+  image(NYMap, 450, 0, 750, 750);
   //rect(xPos, yPos, boxSize, boxSize * 2);
   for (int i = 0; i < pollution.size(); i++) {
     Pollution p = pollution.get(i);
@@ -97,7 +98,6 @@ void draw() {
     p.drawLetters();
   }
   
-  image(NYMap, 450, 0, 750, 750);
 }
 
 void Cross(){
