@@ -29,7 +29,7 @@ PImage body;
 
 void setup() {
   size(1200, 750);
-  xPos = width - width/10;
+  xPos = width + 40;
   yPos = height/10;
   rectMode(RADIUS); 
   noStroke();
@@ -51,6 +51,7 @@ void draw() {
   background(220, 10, 100);
   fill(0);
   image(body,xPos, yPos);
+  Cross();
   //rect(xPos, yPos, boxSize, boxSize * 2);
   for (int i = 0; i < pollution.size(); i++) {
     Pollution p = pollution.get(i);
@@ -60,7 +61,7 @@ void draw() {
 }
 
 void Cross(){
-  
+  rect(xPos + 50, yPos + 100, 9, 20);
 }
 
 void mousePressed() {
