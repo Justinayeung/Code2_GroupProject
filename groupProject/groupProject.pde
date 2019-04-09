@@ -9,26 +9,35 @@ boolean locked = false;
 float xOffset = 0.0; 
 float yOffset = 0.0; 
 ArrayList<Pollution> pollution;
+PImage body;
 
 
 void setup() {
   size(1200, 750);
-  xPos = width - width/20;
+  xPos = width - width/10;
   yPos = height/10;
   rectMode(RADIUS); 
   noStroke();
   pollution = new ArrayList<Pollution>();
+  
+  body = loadImage("body.png");
+  body.resize(100,150);
 }
 
 void draw() { 
   background(220, 10, 100);
   fill(0);
-  rect(xPos, yPos, boxSize, boxSize * 2);
+  image(body,xPos, yPos);
+  //rect(xPos, yPos, boxSize, boxSize * 2);
   for (int i = 0; i < pollution.size(); i++) {
     Pollution p = pollution.get(i);
     p.addLetters();
     p.drawLetters();
   }
+}
+
+void Cross(){
+  
 }
 
 void mousePressed() {
