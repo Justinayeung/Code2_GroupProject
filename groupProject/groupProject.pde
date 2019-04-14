@@ -29,7 +29,11 @@ PImage NYMap;
 //________________________________________________Pollution
 ArrayList<Pollution> pollution;
 
-
+//________________________________________________Variables for Area Buttons
+// Variables for Bronx Button
+int BronxButton_X = 700;
+int BronxButton_Y = 300;
+int BronxButton_Size = 50;
 
 void setup() {
   size(1200, 750);
@@ -97,6 +101,8 @@ void draw() {
     p.drawLetters();
   }
   
+  rect(BronxButton_X, BronxButton_Y, BronxButton_Size, BronxButton_Size);
+
 }
 
 void Cross(){
@@ -132,6 +138,16 @@ void mousePressed() {
   xOffset = mouseX - xPos; 
   yOffset = mouseY - yPos; 
 
+  if (mouseX > BronxButton_X && mouseX < BronxButton_X + BronxButton_Size && mouseY > BronxButton_Y && mouseY < BronxButton_Y + BronxButton_Size)
+    {
+      fill(255);
+      println("Square button pressed.");
+    }
+    else
+    {
+      fill(127.5);
+      println("No button pressed.");
+    }
 }
 
 void mouseDragged() {
