@@ -38,10 +38,10 @@ int BronxButton_Size = 50;
 void setup() {
   size(1200, 750);
   //________________________________________________Health
-  xPos = 100;
+  xPos = width/12;
   yPos = height/2;
   rectMode(RADIUS); 
-  //rect(
+  //drawing
   body = loadImage("body.png");
   body.resize(250, 400);
   //________________________________________________table
@@ -92,9 +92,10 @@ void draw() {
   background(220, 10, 100);
   fill(0);
   image(body,xPos, yPos - 300);
+  showingPercentageBox();
   Cross();
   image(NYMap, 450, 0, 750, 750);
-  //rect(xPos, yPos, boxSize, boxSize * 2);
+
   for (int i = 0; i < pollution.size(); i++) {
     Pollution p = pollution.get(i);
     p.addLetters();
@@ -102,13 +103,17 @@ void draw() {
   }
   
   rect(BronxButton_X, BronxButton_Y, BronxButton_Size, BronxButton_Size);
+  
+  //needle
+  movingNeedle();
 
 }
 
 void Cross(){
   //white box(decoration)
+  fill(0);
+  rect( xPos + 125, yPos - 30, 81, 81);
   fill(255);
-  strokeWeight(15);
   rect(xPos + 125, yPos - 30, 75, 75);
   // cross
   fill(0);
@@ -122,6 +127,18 @@ void Cross(){
   strokeWeight(3);
   fill(0);
   ellipse(xPos + 125, yPos - 310, 8, 40);
+  // base
+  rect(width/4 - 70, height - 7, 190, 15);
+}
+
+void showingPercentageBox(){
+  fill(255,122,122);
+  rect( xPos + 125, yPos - 65, 96, 120);
+}
+
+void movingNeedle(){
+  rect(xPos + 250, yPos + 325, boxSize/6, boxSize/2);
+  rect(xPos + 250, yPos + 280, boxSize, (boxSize * 2 )-2);
 }
 
 void mousePressed() {
@@ -134,6 +151,14 @@ void mousePressed() {
   } else {
     locked = false;
   }
+  
+  //needle
+  if(mouseX > xPos + 250 - boxSize/2 && mouseX < xPos + boxSize/2 && 
+      mouseY > yPos - boxSize && mouseY < yPos + boxSize){
+        locked = true; 
+       } else {
+        locked = false;
+      }
   
   xOffset = mouseX - xPos; 
   yOffset = mouseY - yPos; 
