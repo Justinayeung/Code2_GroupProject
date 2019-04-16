@@ -16,7 +16,6 @@ PImage body;
 
 PImage NYMap;
 
-<<<<<<< HEAD
 ArrayList<Pollution> pollutions;
 String message0 = "BRONX";
 String message1 = "BROOKLYN";
@@ -32,12 +31,10 @@ String message10 = "UNION SQUARE";
 String message11 = "LOWER MANHATTAN";
 float bronxLife, brooklynLife, queensLife, central_harlemLife, east_harlemLife, upperWLife, upperELife, chelseaLife, gramercy_murrayLife, greenwich_sohoLife, union_lowerELife, lower_manhattanLife;
 float life;
-=======
 String instruction = "Drag The Needle To See Details";
 
 //ArrayList<Pollution> pollution;
 
->>>>>>> 8b0e0c13f7b8dbdbbd32000c5a7ebbecb9c7e03f
 //____________________________________________________________[SETUP FUNCTION]
 void setup() {
   size(1200, 750);
@@ -54,7 +51,6 @@ void setup() {
   
   NYMap = loadImage("NYMap.png");
 
-<<<<<<< HEAD
   pollutions = new ArrayList<Pollution>();
   airData = loadTable("Air_Quality.csv", "header");
   bronxLife = airData.getFloat(0, "data_");
@@ -82,9 +78,8 @@ void setup() {
   //pollutions.add(new Pollution(x, y, greenwich_sohoLife, message9));
   //pollutions.add(new Pollution(x, y, union_lowerELife, message10));
   //pollutions.add(new Pollution(x, y, lower_manhattanLife, message11));
-=======
+
   //pollution = new ArrayList<Pollution>();
->>>>>>> 8b0e0c13f7b8dbdbbd32000c5a7ebbecb9c7e03f
 }
 
 //____________________________________________________________[DRAW FUNCTION]
@@ -95,32 +90,12 @@ void draw() {
   showingPercentageBox();
   Cross();
   image(NYMap, 450, 0, 750, 750);
-<<<<<<< HEAD
+  Banner();
   for (int i = 0; i < pollutions.size(); i++) {
     Pollution p = pollutions.get(i);
     p.addLetters();
     p.drawLetters();
-=======
-  /*for (int i = 0; i < pollution.size(); i++) {
-    Pollution p = pollution.get(i);
-    //p.addLetters();
-    //p.drawLetters();
-    //pollution.add(new Pollution(200, 200, bronx, message0));
-    //pollution.add(new Pollution(600, 500, brooklyn, message1));
-    //pollution.add(new Pollution(x, y, queens, message2));
-    //pollution.add(new Pollution(x, y, central_harlem, message3));
-    //pollution.add(new Pollution(x, y, east_harlem, message4));
-    //pollution.add(new Pollution(x, y, upperW, message5));
-    //pollution.add(new Pollution(x, y, upperE, message6));
-    //pollution.add(new Pollution(x, y, chelsea, message7));
-    //pollution.add(new Pollution(x, y, gramercy_murray, message8));
-    //pollution.add(new Pollution(x, y, greenwich_soho, message9));
-    //pollution.add(new Pollution(x, y, union_lowerE, message10));
-    //pollution.add(new Pollution(x, y, lower_manhattan, message11));
->>>>>>> 8b0e0c13f7b8dbdbbd32000c5a7ebbecb9c7e03f
   }
-  */
-  Banner();
   movingNeedle();
 }
 
@@ -184,13 +159,6 @@ void Banner(){
 
 //____________________________________________________________[MOUSEPRESSED FUNCTION]
 void mousePressed() {
-  /*if(mouseX > xPos - boxSize && mouseX < xPos + boxSize && 
-      mouseY > yPos - boxSize * 2 && mouseY < yPos + boxSize * 2) { 
-    locked = true; 
-  } else {
-    locked = false;
-  }
-  */
   //needle
   if(mouseX > (xNeedle - boxSize/2) && mouseX < (xNeedle + boxSize/2) && 
       mouseY > (yNeedle - boxSize * 2) && mouseY < (yNeedle + boxSize * 2)){

@@ -17,7 +17,7 @@ class Pollution
     this.posX = posX;
     this.posY = posY;
     letters = new ArrayList<Letter>();
-    f = createFont("Arial", 10, true);
+    f = createFont("Arial", 1, true);
     textFont(f);
     letter = new Letter[message.length()];  
     int x = 16;
@@ -41,15 +41,9 @@ class Pollution
     } 
 
     for (int i = letters.size() - 1; i >= 0; i--) {
-<<<<<<< HEAD
       if (life < 0) {
-=======
-      //Letter l = letters.get(i);
-     /* if (bronxLife < 0) {
->>>>>>> 8b0e0c13f7b8dbdbbd32000c5a7ebbecb9c7e03f
         letters.remove(i);
       }
-      */
     }
   }
 }
