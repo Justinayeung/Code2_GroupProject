@@ -88,6 +88,7 @@ void draw() {
   image(body,xPos, yPos - 300);
   showingPercentageBox();
   Cross();
+  movingNeedle();
   image(NYMap, 450, 0, 750, 750);
   for (int i = 0; i < pollution.size(); i++) {
     Pollution p = pollution.get(i);
