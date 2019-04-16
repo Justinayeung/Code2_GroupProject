@@ -5,6 +5,7 @@ class Pollution
   float posY;
   float rate; 
   float colors;
+  float life;
   PFont f;
   String message = "";
   Letter[] letter;
@@ -20,9 +21,9 @@ class Pollution
     f = createFont("Arial", 10, true);
     textFont(f);
     letter = new Letter[message.length()];  
-    int x = 16;
+    int x = 10;
     for(int i = 0; i < message.length(); i++){
-      letter[i] = new Letter(x, 100, message.charAt(i), life);
+      letter[i] = new Letter(x, 5, message.charAt(i), life_);
       x += textWidth(message.charAt(i));
     }
   }
@@ -38,10 +39,10 @@ class Pollution
       Letter b = letters.get(i);
       b.update();
       b.display();
-    } 
-
-    for (int i = letters.size() - 1; i >= 0; i--) {
-      if (life < 0) {
+    }
+    for(int i = letters.size() - 1; i >= 0; i--) {
+      Letter l = letters.get(i);
+      if(l.life < 0) {
         letters.remove(i);
       }
     }

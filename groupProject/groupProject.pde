@@ -30,7 +30,6 @@ String message9 = "GREENWICH VILLAGE";
 String message10 = "UNION SQUARE";
 String message11 = "LOWER MANHATTAN";
 float bronxLife, brooklynLife, queensLife, central_harlemLife, east_harlemLife, upperWLife, upperELife, chelseaLife, gramercy_murrayLife, greenwich_sohoLife, union_lowerELife, lower_manhattanLife;
-float life;
 String instruction = "Drag The Needle To See Details";
 
 //ArrayList<Pollution> pollution;
