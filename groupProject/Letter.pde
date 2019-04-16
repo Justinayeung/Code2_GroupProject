@@ -6,91 +6,57 @@ class Letter
   float velX;
   float velY;
   float alpha;
-  float bronxLife, brooklynLife, queensLife, central_harlemLife, east_harlemLife, upperWLife, upperELife, chelseaLife, gramercy_murrayLife, greenwich_sohoLife, union_lowerELife, lower_manhattanLife;
-    
-  Letter(float posX, float posY, char letter)
+  String location;
+  
+  Letter(float posX, float posY, char letter, float life_)
   {
+    life = life_;
     this.posX = posX + random(-2, 3);
     this.posY = posY + random(-40, 40);
     this.velX = random(-0.5, 0.5);
     this.velY = random(-5, 0);
     this.letter = letter;
     alpha = 180;
-    
-    airData = loadTable("Air_Quality.csv", "header");
-
-    bronxLife = airData.getFloat(0, "data_");
-    brooklynLife = airData.getFloat(1, "data_");
-    queensLife = airData.getFloat(2, "data_");
-    central_harlemLife = airData.getFloat(3, "data_");
-    east_harlemLife = airData.getFloat(4, "data_");
-    upperWLife = airData.getFloat(5, "data_");
-    upperELife = airData.getFloat(6, "data_");
-    chelseaLife = airData.getFloat(7, "data_");
-    gramercy_murrayLife = airData.getFloat(8, "data_");
-    greenwich_sohoLife = airData.getFloat(9, "data_");
-    union_lowerELife = airData.getFloat(10, "data_");
-    lower_manhattanLife = airData.getFloat(11, "data_");
   }
   
-  void display0() {
+  void display() {
     noStroke();
-    fill(map(bronxLife, 50, 0, 200, 20));
-    text(letter, posX, posY);
-  }
-  void display1() {
-    noStroke();
-    fill(map(brooklynLife, 50, 0, 200, 20));
-    text(letter, posX, posY);
-  }
-  void display2() {
-    noStroke();
-    fill(map(queensLife, 50, 0, 200, 20));
-    text(letter, posX, posY);
-  }
-  void display3() {
-    noStroke();
-    fill(map(central_harlemLife, 50, 0, 200, 20));
-    text(letter, posX, posY);
-  }
-  void display4() {
-    noStroke();
-    fill(map(east_harlemLife, 50, 0, 200, 20));
-    text(letter, posX, posY);
-  }
-  void display5() {
-    noStroke();
-    fill(map(upperWLife, 50, 0, 200, 20));
-    text(letter, posX, posY);
-  }
-  void display6() {
-    noStroke();
-    fill(map(upperELife, 50, 0, 200, 20));
-    text(letter, posX, posY);
-  }
-  void display7() {
-    noStroke();
-    fill(map(chelseaLife, 50, 0, 200, 20));
-    text(letter, posX, posY);
-  }
-  void display8() {
-    noStroke();
-    fill(map(gramercy_murrayLife, 50, 0, 200, 20));
-    text(letter, posX, posY);
-  }
-  void display9() {
-    noStroke();
-    fill(map(greenwich_sohoLife, 50, 0, 200, 20));
-    text(letter, posX, posY);
-  }
-  void display10() {
-    noStroke();
-    fill(map(union_lowerELife, 50, 0, 200, 20));
-    text(letter, posX, posY);
-  }
-  void display11() {
-    noStroke();
-    fill(map(lower_manhattanLife, 50, 0, 200, 20));
+    if(life == bronxLife) {
+      fill(map(bronxLife, 50, 0, 200, 20));
+    }
+    if(life == brooklynLife) {
+      fill(map(brooklynLife, 50, 0, 200, 20));
+    }
+    if(life == queensLife) {
+      fill(map(queensLife, 50, 0, 200, 20));
+    }
+    if(life == central_harlemLife) {
+      fill(map(central_harlemLife, 50, 0, 200, 20));
+    }
+    if(life == east_harlemLife) {
+      fill(map(east_harlemLife, 50, 0, 200, 20));
+    }
+    if(life == upperWLife) {
+      fill(map(upperWLife, 50, 0, 200, 20));
+    }
+    if(life == upperELife) {
+      fill(map(upperELife, 50, 0, 200, 20));
+    }
+    if(life == chelseaLife) {
+      fill(map(chelseaLife, 50, 0, 200, 20));
+    }
+    if(life == gramercy_murrayLife) {
+      fill(map(gramercy_murrayLife, 50, 0, 200, 20));
+    }
+    if(life == greenwich_sohoLife) {
+      fill(map(greenwich_sohoLife, 50, 0, 200, 20));
+    }
+    if(life == union_lowerELife) {
+      fill(map(union_lowerELife, 50, 0, 200, 20));
+    }
+    if(life == lower_manhattanLife) {
+      fill(map(lower_manhattanLife, 50, 0, 200, 20));
+    }
     text(letter, posX, posY);
   }
   
