@@ -72,6 +72,7 @@ void draw() {
   image(body,xPos, yPos - 300);
   showingPercentageBox();
   Cross();
+  movingNeedle();
   image(NYMap, 450, 0, 750, 750);
   for (int i = 0; i < pollution.size(); i++) {
     Pollution p = pollution.get(i);
@@ -90,9 +91,6 @@ void draw() {
     //pollution.add(new Pollution(x, y, union_lowerE, message10));
     //pollution.add(new Pollution(x, y, lower_manhattan, message11));
   }
-
-//________________________________________needle
-  movingNeedle();
 }
 
 //____________________________________________________________[CROSS CLASS]
@@ -117,10 +115,12 @@ void Cross(){
   // base
   rect(width/4 - 70, height - 7, 190, 15);
 }
+//________________________________________Percentage Box
 void showingPercentageBox(){
   fill(255,122,122);
   rect( xPos + 125, yPos - 65, 96, 120);
 }
+//_____________________________________________________________needle
 void movingNeedle(){
   rect(xPos + 250, yPos + 325, boxSize/6, boxSize/2);
   rect(xPos + 250, yPos + 280, boxSize, (boxSize * 2 )-2);
