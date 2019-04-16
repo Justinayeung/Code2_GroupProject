@@ -2,6 +2,7 @@
 //https://processing.org/tutorials/text/
 //https://github.com/Justinayeung/Code2_GroupProject/tree/master/groupProject/Particles
 
+//____________________________________________________________[VARIABLES]
 Table airData;
 int bronx;
 int brooklyn;
@@ -15,7 +16,8 @@ int Gramercy_Murray;
 int Greenwich_Soho;
 int Union_LowerE;
 int Lower_Manhattan;
-//________________________________________________Health
+
+//________________________________________health
 float xPos;
 float yPos;
 int boxSize = 20;
@@ -26,25 +28,22 @@ PImage body;
 
 PImage NYMap;
 
-//________________________________________________Pollution
+//________________________________________pollution
 ArrayList<Pollution> pollution;
 
-//________________________________________________Variables for Area Buttons
-// Variables for Bronx Button
-int BronxButton_X = 700;
-int BronxButton_Y = 300;
-int BronxButton_Size = 50;
-
+//____________________________________________________________[SETUP FUNCTION]
 void setup() {
   size(1200, 750);
-  //________________________________________________Health
+
+//________________________________________health
   xPos = width/12;
   yPos = height/2;
   rectMode(RADIUS); 
   //drawing
   body = loadImage("body.png");
   body.resize(250, 400);
-  //________________________________________________table
+  
+//________________________________________table
   airData = loadTable("Air_Quality.csv", "header");
   for(TableRow row : airData.rows())
   {
@@ -84,10 +83,11 @@ void setup() {
   
   NYMap = loadImage("NYMap.png");
 
-  //________________________________________________Pollution
+//________________________________________pollution
   pollution = new ArrayList<Pollution>();
 }
 
+//____________________________________________________________[DRAW FUNCTION]
 void draw() { 
   background(220, 10, 100);
   fill(0);
@@ -101,14 +101,12 @@ void draw() {
     p.addLetters();
     p.drawLetters();
   }
-  
-  rect(BronxButton_X, BronxButton_Y, BronxButton_Size, BronxButton_Size);
-  
-  //needle
+    
+//________________________________________needle
   movingNeedle();
-
 }
 
+//____________________________________________________________[CROSS CLASS]
 void Cross(){
   //white box(decoration)
   fill(0);
@@ -141,6 +139,7 @@ void movingNeedle(){
   rect(xPos + 250, yPos + 280, boxSize, (boxSize * 2 )-2);
 }
 
+//____________________________________________________________[MOUSEPRESSED FUNCTION]
 void mousePressed() {
   
   pollution.add(new Pollution(mouseX, mouseY));
@@ -163,18 +162,9 @@ void mousePressed() {
   xOffset = mouseX - xPos; 
   yOffset = mouseY - yPos; 
 
-  if (mouseX > BronxButton_X && mouseX < BronxButton_X + BronxButton_Size && mouseY > BronxButton_Y && mouseY < BronxButton_Y + BronxButton_Size)
-    {
-      fill(255);
-      println("Square button pressed.");
-    }
-    else
-    {
-      fill(127.5);
-      println("No button pressed.");
-    }
 }
 
+//____________________________________________________________[MOUSEDRAGGED FUNCTION]
 void mouseDragged() {
   if(locked) {
     xPos = mouseX - xOffset; 
@@ -182,6 +172,7 @@ void mouseDragged() {
   }
 }
 
+//____________________________________________________________[MOUSERELEASED FUNCTION]
 void mouseReleased() {
   locked = false;
 }
