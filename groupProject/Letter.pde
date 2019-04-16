@@ -33,16 +33,81 @@ class Letter
     lower_manhattanLife = airData.getFloat(11, "data_");
   }
   
-  void display() {
+  void display0() {
     noStroke();
-    fill(map(life, 50, 0, 200, 20));
+    fill(map(bronxLife, 50, 0, 200, 20));
     text(letter, posX, posY);
-    
+  }
+  void display1() {
+    noStroke();
+    fill(map(brooklynLife, 50, 0, 200, 20));
+    text(letter, posX, posY);
+  }
+  void display2() {
+    noStroke();
+    fill(map(queensLife, 50, 0, 200, 20));
+    text(letter, posX, posY);
+  }
+  void display3() {
+    noStroke();
+    fill(map(central_harlemLife, 50, 0, 200, 20));
+    text(letter, posX, posY);
+  }
+  void display4() {
+    noStroke();
+    fill(map(east_harlemLife, 50, 0, 200, 20));
+    text(letter, posX, posY);
+  }
+  void display5() {
+    noStroke();
+    fill(map(upperWLife, 50, 0, 200, 20));
+    text(letter, posX, posY);
+  }
+  void display6() {
+    noStroke();
+    fill(map(upperELife, 50, 0, 200, 20));
+    text(letter, posX, posY);
+  }
+  void display7() {
+    noStroke();
+    fill(map(chelseaLife, 50, 0, 200, 20));
+    text(letter, posX, posY);
+  }
+  void display8() {
+    noStroke();
+    fill(map(gramercy_murrayLife, 50, 0, 200, 20));
+    text(letter, posX, posY);
+  }
+  void display9() {
+    noStroke();
+    fill(map(greenwich_sohoLife, 50, 0, 200, 20));
+    text(letter, posX, posY);
+  }
+  void display10() {
+    noStroke();
+    fill(map(union_lowerELife, 50, 0, 200, 20));
+    text(letter, posX, posY);
+  }
+  void display11() {
+    noStroke();
+    fill(map(lower_manhattanLife, 50, 0, 200, 20));
+    text(letter, posX, posY);
   }
   
   void update() {
     alpha -= 20;
-    life = life - 0.5;
+    bronxLife = bronxLife - 0.5;
+    brooklynLife = brooklynLife - 0.5;
+    queensLife = queensLife - 0.5;
+    central_harlemLife = central_harlemLife - 0.5;
+    east_harlemLife = east_harlemLife - 0.5;
+    upperWLife = upperWLife - 0.5;
+    upperELife = upperELife - 0.5;
+    chelseaLife = chelseaLife - 0.5;
+    gramercy_murrayLife = gramercy_murrayLife - 0.5;
+    greenwich_sohoLife = greenwich_sohoLife - 0.5;
+    union_lowerELife = union_lowerELife - 0.5;
+    lower_manhattanLife = lower_manhattanLife - 0.5;
     this.posX += this.velX;
     this.posY += this.velY;
   }

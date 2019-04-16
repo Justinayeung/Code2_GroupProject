@@ -44,8 +44,8 @@ void draw() {
   image(NYMap, 450, 0, 750, 750);
   for (int i = 0; i < pollution.size(); i++) {
     Pollution p = pollution.get(i);
-    p.addLetters();
-    p.drawLetters();
+    //p.addLetters();
+    //p.drawLetters();
     //pollution.add(new Pollution(200, 200, bronx, message0));
     //pollution.add(new Pollution(600, 500, brooklyn, message1));
     //pollution.add(new Pollution(x, y, queens, message2));
