@@ -161,9 +161,10 @@ class Pollution
 
     for (int i = letters.size() - 1; i >= 0; i--) {
       //Letter l = letters.get(i);
-      if (bronxLife < 0) {
+     /* if (bronxLife < 0) {
         letters.remove(i);
       }
+      */
     }
   }
 }

@@ -16,7 +16,7 @@ PImage body;
 
 PImage NYMap;
 
-ArrayList<Pollution> pollution;
+//ArrayList<Pollution> pollution;
 
 //____________________________________________________________[SETUP FUNCTION]
 void setup() {
@@ -25,8 +25,8 @@ void setup() {
   xPos = width/12;
   yPos = height/2;
   
-  xNeedle = width/12;
-  yNeedle = height/2;
+  xNeedle = width/12 + 250;
+  yNeedle = height/2 + 280;
   rectMode(RADIUS); 
   //drawing
   body = loadImage("body.png");
@@ -34,7 +34,7 @@ void setup() {
   
   NYMap = loadImage("NYMap.png");
 
-  pollution = new ArrayList<Pollution>();
+  //pollution = new ArrayList<Pollution>();
 }
 
 //____________________________________________________________[DRAW FUNCTION]
@@ -44,9 +44,8 @@ void draw() {
   image(body,xPos, yPos - 300);
   showingPercentageBox();
   Cross();
-  movingNeedle();
   image(NYMap, 450, 0, 750, 750);
-  for (int i = 0; i < pollution.size(); i++) {
+  /*for (int i = 0; i < pollution.size(); i++) {
     Pollution p = pollution.get(i);
     //p.addLetters();
     //p.drawLetters();
@@ -63,6 +62,9 @@ void draw() {
     //pollution.add(new Pollution(x, y, union_lowerE, message10));
     //pollution.add(new Pollution(x, y, lower_manhattan, message11));
   }
+  */
+  
+  movingNeedle();
 }
 
 //____________________________________________________________[CROSS CLASS]
@@ -87,15 +89,15 @@ void Cross(){
   // base
   rect(width/4 - 70, height - 7, 190, 15);
 }
-//________________________________________Percentage Box
+//_________________________________________________________Percentage Box
 void showingPercentageBox(){
   fill(255,122,122);
   rect( xPos + 125, yPos - 65, 96, 120);
 }
-//_____________________________________________________________needle
+//__________________________________________________________________needle
 void movingNeedle(){
-  rect(xNeedle + 250, yNeedle + 325, boxSize/6, boxSize/2);
-  rect(xNeedle + 250, yNeedle + 280, boxSize, (boxSize * 2 )-2);
+  rect(xNeedle, yNeedle + 45, boxSize/6, boxSize/2);
+  rect(xNeedle, yNeedle, boxSize, boxSize * 2);
 }
 
 //____________________________________________________________[MOUSEPRESSED FUNCTION]
@@ -108,20 +110,20 @@ void mousePressed() {
   }
   */
   //needle
-  if(mouseX > xNeedle + 250 - boxSize/2 && mouseX < xNeedle + boxSize/2 && 
-      mouseY > yNeedle - boxSize && mouseY < yNeedle + boxSize){
+  if(mouseX > (xNeedle - boxSize/4) && mouseX < (xNeedle + boxSize/4) && 
+      mouseY > (yNeedle - boxSize) && mouseY < (yNeedle + boxSize)){
         locked = true; 
        } else {
         locked = false;
       }
-  
+  println(locked);
   xOffset = mouseX - xNeedle; 
   yOffset = mouseY - yNeedle; 
 }
 
 //____________________________________________________________[MOUSEDRAGGED FUNCTION]
 void mouseDragged() {
-  if(locked) {
+  if(locked == true) {
     xNeedle = mouseX - xOffset; 
     yNeedle = mouseY - yOffset; 
   }
