@@ -4,20 +4,7 @@
 
 //____________________________________________________________[VARIABLES]
 Table airData;
-float bronx;
-float brooklyn;
-float queens;
-float central_harlem;
-float east_harlem;
-float upperW;
-float upperE;
-float chelsea;
-float gramercy_murray;
-float greenwich_soho;
-float union_lowerE;
-float lower_manhattan;
 
-//________________________________________health
 float xPos;
 float yPos;
 int boxSize = 20;
@@ -28,40 +15,21 @@ PImage body;
 
 PImage NYMap;
 
-//________________________________________pollution
 ArrayList<Pollution> pollution;
 
 //____________________________________________________________[SETUP FUNCTION]
 void setup() {
   size(1200, 750);
 
-//________________________________________health
   xPos = width/12;
   yPos = height/2;
   rectMode(RADIUS); 
   //drawing
   body = loadImage("body.png");
   body.resize(250, 400);
-
-//________________________________________table
-  airData = loadTable("Air_Quality.csv", "header");
   
-  message0 = "BRONX";
-  message1 = "BROOKLYN";
-  message2 = "QUEENS";
-  message3 = "CENTRAL HARLEM";
-  message4 = "EAST HARLEM";
-  message5 = "UPPER WEST SIDE";
-  message6 = "UPPER EAST SIDE";
-  message7 = "CHELSEA";
-  message8 = "GRAMERCY MURRAY";
-  message9 = "GREENIWICH VILLAGE";
-  message10 = "UNION SQUARE";
-  message11 = "LOWER MANHATTAN";
-
   NYMap = loadImage("NYMap.png");
 
-//________________________________________pollution
   pollution = new ArrayList<Pollution>();
 }
 

@@ -21,6 +21,20 @@ class Pollution
     life = life_;
     name = message_;
     letter = new Letter[name.length()];
+    
+    message0 = "BRONX";
+    message1 = "BROOKLYN";
+    message2 = "QUEENS";
+    message3 = "CENTRAL HARLEM";
+    message4 = "EAST HARLEM";
+    message5 = "UPPER WEST SIDE";
+    message6 = "UPPER EAST SIDE";
+    message7 = "CHELSEA";
+    message8 = "GRAMERCY MURRAY";
+    message9 = "GREENIWICH VILLAGE";
+    message10 = "UNION SQUARE";
+    message11 = "LOWER MANHATTAN";
+  
     int x = 16;
     for(int i = 0; i < name.length(); i++)
     {

@@ -6,11 +6,10 @@ class Letter
   float velX;
   float velY;
   float alpha;
-  float life;
+  float bronxLife, brooklynLife, queensLife, central_harlemLife, east_harlemLife, upperWLife, upperELife, chelseaLife, gramercy_murrayLife, greenwich_sohoLife, union_lowerELife, lower_manhattanLife;
     
-  Letter(float posX, float posY, char letter, float life_)
+  Letter(float posX, float posY, char letter)
   {
-    life = life_;
     this.posX = posX + random(-2, 3);
     this.posY = posY + random(-40, 40);
     this.velX = random(-0.5, 0.5);
@@ -18,18 +17,20 @@ class Letter
     this.letter = letter;
     alpha = 180;
     
-    bronx = airData.getFloat(0, "data_");
-    brooklyn = airData.getFloat(1, "data_");
-    queens = airData.getFloat(2, "data_");
-    central_harlem = airData.getFloat(3, "data_");
-    east_harlem = airData.getFloat(4, "data_");
-    upperW = airData.getFloat(5, "data_");
-    upperE = airData.getFloat(6, "data_");
-    chelsea = airData.getFloat(7, "data_");
-    gramercy_murray = airData.getFloat(8, "data_");
-    greenwich_soho = airData.getFloat(9, "data_");
-    union_lowerE = airData.getFloat(10, "data_");
-    lower_manhattan = airData.getFloat(11, "data_");
+    airData = loadTable("Air_Quality.csv", "header");
+
+    bronxLife = airData.getFloat(0, "data_");
+    brooklynLife = airData.getFloat(1, "data_");
+    queensLife = airData.getFloat(2, "data_");
+    central_harlemLife = airData.getFloat(3, "data_");
+    east_harlemLife = airData.getFloat(4, "data_");
+    upperWLife = airData.getFloat(5, "data_");
+    upperELife = airData.getFloat(6, "data_");
+    chelseaLife = airData.getFloat(7, "data_");
+    gramercy_murrayLife = airData.getFloat(8, "data_");
+    greenwich_sohoLife = airData.getFloat(9, "data_");
+    union_lowerELife = airData.getFloat(10, "data_");
+    lower_manhattanLife = airData.getFloat(11, "data_");
   }
   
   void display() {
