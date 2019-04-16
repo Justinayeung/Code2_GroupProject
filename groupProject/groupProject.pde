@@ -7,6 +7,7 @@ Table airData;
 
 float xPos;
 float yPos;
+float xNeedle, yNeedle;
 int boxSize = 20;
 boolean locked = false;
 float xOffset = 0.0; 
@@ -15,6 +16,7 @@ PImage body;
 
 PImage NYMap;
 
+<<<<<<< HEAD
 ArrayList<Pollution> pollutions;
 String message0 = "BRONX";
 String message1 = "BROOKLYN";
@@ -30,12 +32,21 @@ String message10 = "UNION SQUARE";
 String message11 = "LOWER MANHATTAN";
 float bronxLife, brooklynLife, queensLife, central_harlemLife, east_harlemLife, upperWLife, upperELife, chelseaLife, gramercy_murrayLife, greenwich_sohoLife, union_lowerELife, lower_manhattanLife;
 float life;
+=======
+String instruction = "Drag The Needle To See Details";
+
+//ArrayList<Pollution> pollution;
+
+>>>>>>> 8b0e0c13f7b8dbdbbd32000c5a7ebbecb9c7e03f
 //____________________________________________________________[SETUP FUNCTION]
 void setup() {
   size(1200, 750);
 
   xPos = width/12;
   yPos = height/2;
+  
+  xNeedle = width/12 + 250;
+  yNeedle = height/2 + 280;
   rectMode(RADIUS); 
   //drawing
   body = loadImage("body.png");
@@ -43,6 +54,7 @@ void setup() {
   
   NYMap = loadImage("NYMap.png");
 
+<<<<<<< HEAD
   pollutions = new ArrayList<Pollution>();
   airData = loadTable("Air_Quality.csv", "header");
   bronxLife = airData.getFloat(0, "data_");
@@ -70,6 +82,9 @@ void setup() {
   //pollutions.add(new Pollution(x, y, greenwich_sohoLife, message9));
   //pollutions.add(new Pollution(x, y, union_lowerELife, message10));
   //pollutions.add(new Pollution(x, y, lower_manhattanLife, message11));
+=======
+  //pollution = new ArrayList<Pollution>();
+>>>>>>> 8b0e0c13f7b8dbdbbd32000c5a7ebbecb9c7e03f
 }
 
 //____________________________________________________________[DRAW FUNCTION]
@@ -79,13 +94,34 @@ void draw() {
   image(body,xPos, yPos - 300);
   showingPercentageBox();
   Cross();
-  movingNeedle();
   image(NYMap, 450, 0, 750, 750);
+<<<<<<< HEAD
   for (int i = 0; i < pollutions.size(); i++) {
     Pollution p = pollutions.get(i);
     p.addLetters();
     p.drawLetters();
+=======
+  /*for (int i = 0; i < pollution.size(); i++) {
+    Pollution p = pollution.get(i);
+    //p.addLetters();
+    //p.drawLetters();
+    //pollution.add(new Pollution(200, 200, bronx, message0));
+    //pollution.add(new Pollution(600, 500, brooklyn, message1));
+    //pollution.add(new Pollution(x, y, queens, message2));
+    //pollution.add(new Pollution(x, y, central_harlem, message3));
+    //pollution.add(new Pollution(x, y, east_harlem, message4));
+    //pollution.add(new Pollution(x, y, upperW, message5));
+    //pollution.add(new Pollution(x, y, upperE, message6));
+    //pollution.add(new Pollution(x, y, chelsea, message7));
+    //pollution.add(new Pollution(x, y, gramercy_murray, message8));
+    //pollution.add(new Pollution(x, y, greenwich_soho, message9));
+    //pollution.add(new Pollution(x, y, union_lowerE, message10));
+    //pollution.add(new Pollution(x, y, lower_manhattan, message11));
+>>>>>>> 8b0e0c13f7b8dbdbbd32000c5a7ebbecb9c7e03f
   }
+  */
+  Banner();
+  movingNeedle();
 }
 
 //____________________________________________________________[CROSS CLASS]
@@ -110,43 +146,68 @@ void Cross(){
   // base
   rect(width/4 - 70, height - 7, 190, 15);
 }
-//________________________________________Percentage Box
+//_________________________________________________________Percentage Box
 void showingPercentageBox(){
+  pushMatrix();
+  translate(xPos + 125, yPos - 65);
   fill(255,122,122);
-  rect( xPos + 125, yPos - 65, 96, 120);
+  rect( 0, 0, 96, 120);
+  popMatrix();
 }
-//_____________________________________________________________needle
+//__________________________________________________________________needle
 void movingNeedle(){
-  rect(xPos + 250, yPos + 325, boxSize/6, boxSize/2);
-  rect(xPos + 250, yPos + 280, boxSize, (boxSize * 2 )-2);
+  color c1 = color(#C4C3D0);
+  fill(c1);
+  rect(xNeedle, yNeedle + 45, boxSize/7, boxSize/1.2);
+  fill(0);
+  rect(xNeedle, yNeedle, boxSize, boxSize * 2);
+}
+//__________________________________________________________________Banner 
+void Banner(){
+  color b2 = color(#d4b8cd);
+  fill(b2);
+  for ( int i = 0; i < height; i = i + 28){
+    rect(width/2 - 90, i + 11, 64, 11);
+  }
+  color b1 = color(#a8709a);
+  fill(b1);
+  rect(width/2 - 90, height/2, 60, height);
+  
+  pushMatrix();
+  translate(width/2 - 108, height/15 - 10);
+  rotate(radians(90));
+  fill(b2);
+  textSize(45);
+  text(instruction, 0, 0);
+  popMatrix();
 }
 
 //____________________________________________________________[MOUSEPRESSED FUNCTION]
 void mousePressed() {
-  if(mouseX > xPos - boxSize && mouseX < xPos + boxSize && 
+  /*if(mouseX > xPos - boxSize && mouseX < xPos + boxSize && 
       mouseY > yPos - boxSize * 2 && mouseY < yPos + boxSize * 2) { 
     locked = true; 
   } else {
     locked = false;
   }
-  
+  */
   //needle
-  if(mouseX > xPos + 250 - boxSize/2 && mouseX < xPos + boxSize/2 && 
-      mouseY > yPos - boxSize && mouseY < yPos + boxSize){
+  if(mouseX > (xNeedle - boxSize/2) && mouseX < (xNeedle + boxSize/2) && 
+      mouseY > (yNeedle - boxSize * 2) && mouseY < (yNeedle + boxSize * 2)){
         locked = true; 
        } else {
         locked = false;
       }
-  
-  xOffset = mouseX - xPos; 
-  yOffset = mouseY - yPos; 
+  println(locked);
+  xOffset = mouseX - xNeedle; 
+  yOffset = mouseY - yNeedle; 
 }
 
 //____________________________________________________________[MOUSEDRAGGED FUNCTION]
 void mouseDragged() {
-  if(locked) {
-    xPos = mouseX - xOffset; 
-    yPos = mouseY - yOffset; 
+  if(locked == true) {
+    xNeedle = mouseX - xOffset; 
+    yNeedle = mouseY - yOffset; 
   }
 }
 
