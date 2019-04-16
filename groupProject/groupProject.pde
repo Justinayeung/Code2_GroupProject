@@ -297,8 +297,6 @@ void setup() {
         bronx = airData.getFloat(0, "data_");
         message = "BRONX";
         bronx = life;
-        xPos = 500;
-        yPos = 500;
         //println(airData.getFloat(0, "data_"));
         println(bronx);
         break;
@@ -339,33 +337,33 @@ void setup() {
         //println(airData.getFloat(6, "data_"));
         break;
       case "Chelsea":
-        chelsea = airData.getFloat(7, "data_");
+        Chelsea = airData.getFloat(7, "data_");
         message = "CHELSEA";
-        chelsea = life;
+        Chelsea = life;
         //println(airData.getFloat(7, "data_"));
         break;
       case "Gramercy Park - Murray Hill":
-        gramercy_Murray = airData.getFloat(8, "data_");
+        Gramercy_Murray = airData.getFloat(8, "data_");
         message = "GRAMERCY MURRAY";
-        gramercy_Murray = life;
+        Gramercy_Murray = life;
         //println(airData.getFloat(8, "data_"));
         break;
       case "Greenwich Village - SoHo":
-        greenwich_Soho = airData.getFloat(9, "data_");
+        Greenwich_Soho = airData.getFloat(9, "data_");
         message = "GREENIWICH VILLAGE";
-        greenwich_Soho = life;
+        Greenwich_Soho = life;
         //println(airData.getFloat(9, "data_"));
         break;
       case "Union Square - Lower East Side":
-        union_LowerE = airData.getFloat(10, "data_");
+        Union_LowerE = airData.getFloat(10, "data_");
         message = "UNION SQUARE";
-        union_LowerE = life;
+        Union_LowerE = life;
         //println(airData.getFloat(10, "data_"));
         break;
       case "Lower Manhattan":
-        lower_Manhattan = airData.getFloat(11, "data_");
+        Lower_Manhattan = airData.getFloat(11, "data_");
         message = "LOWER MANHATTAN";
-        lower_Manhattan = life;
+        Lower_Manhattan = life;
         //println(airData.getFloat(11, "data_"));
         break;
     }
