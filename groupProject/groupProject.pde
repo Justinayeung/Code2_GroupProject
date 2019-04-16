@@ -16,6 +16,8 @@ PImage body;
 
 PImage NYMap;
 
+String instruction = "Drag Needle To See Details";
+
 //ArrayList<Pollution> pollution;
 
 //____________________________________________________________[SETUP FUNCTION]
@@ -63,7 +65,7 @@ void draw() {
     //pollution.add(new Pollution(x, y, lower_manhattan, message11));
   }
   */
-  
+  Banner();
   movingNeedle();
 }
 
@@ -91,13 +93,38 @@ void Cross(){
 }
 //_________________________________________________________Percentage Box
 void showingPercentageBox(){
+  pushMatrix();
+  translate(xPos + 125, yPos - 65);
   fill(255,122,122);
-  rect( xPos + 125, yPos - 65, 96, 120);
+  rect( 0, 0, 96, 120);
+  popMatrix();
 }
 //__________________________________________________________________needle
 void movingNeedle(){
-  rect(xNeedle, yNeedle + 45, boxSize/6, boxSize/2);
+  color c1 = color(#C4C3D0);
+  fill(c1);
+  rect(xNeedle, yNeedle + 45, boxSize/7, boxSize/1.2);
+  fill(0);
   rect(xNeedle, yNeedle, boxSize, boxSize * 2);
+}
+//__________________________________________________________________Banner 
+void Banner(){
+  color b2 = color(#d4b8cd);
+  fill(b2);
+  for ( int i = 0; i < height; i = i + 28){
+    rect(width/2 - 90, i + 11, 64, 11);
+  }
+  color b1 = color(#a8709a);
+  fill(b1);
+  rect(width/2 - 90, height/2, 60, height);
+  
+  pushMatrix();
+  translate(width/2 - 108, height/11 - 10);
+  rotate(radians(90));
+  fill(b2);
+  textSize(50);
+  text(instruction, 0, 0);
+  popMatrix();
 }
 
 //____________________________________________________________[MOUSEPRESSED FUNCTION]
@@ -110,8 +137,8 @@ void mousePressed() {
   }
   */
   //needle
-  if(mouseX > (xNeedle - boxSize/4) && mouseX < (xNeedle + boxSize/4) && 
-      mouseY > (yNeedle - boxSize) && mouseY < (yNeedle + boxSize)){
+  if(mouseX > (xNeedle - boxSize/2) && mouseX < (xNeedle + boxSize/2) && 
+      mouseY > (yNeedle - boxSize * 2) && mouseY < (yNeedle + boxSize * 2)){
         locked = true; 
        } else {
         locked = false;
