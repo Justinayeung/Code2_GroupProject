@@ -6,6 +6,7 @@ class Pollution
   float rate; 
   float colors;
   PFont f;
+  String message0, message1, message2, message3, message4, message5, message6, message7, message8, message9, message10, message11;
   String name = "";
   Letter[] letter;
   //Data

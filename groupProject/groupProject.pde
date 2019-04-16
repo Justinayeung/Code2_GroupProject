@@ -17,10 +17,6 @@ float greenwich_soho;
 float union_lowerE;
 float lower_manhattan;
 
-String message0, message1, message2, message3, message4, message5, message6, message7, message8, message9, message10, message11 = "";
-float life;
-//________________________________________________Health
-
 //________________________________________health
 float xPos;
 float yPos;
@@ -50,18 +46,6 @@ void setup() {
 //________________________________________table
   airData = loadTable("Air_Quality.csv", "header");
   
-  bronx = airData.getFloat(0, "data_");
-  brooklyn = airData.getFloat(1, "data_");
-  queens = airData.getFloat(2, "data_");
-  central_harlem = airData.getFloat(3, "data_");
-  east_harlem = airData.getFloat(4, "data_");
-  upperW = airData.getFloat(5, "data_");
-  upperE = airData.getFloat(6, "data_");
-  chelsea = airData.getFloat(7, "data_");
-  gramercy_murray = airData.getFloat(8, "data_");
-  greenwich_soho = airData.getFloat(9, "data_");
-  union_lowerE = airData.getFloat(10, "data_");
-  lower_manhattan = airData.getFloat(11, "data_");
   message0 = "BRONX";
   message1 = "BROOKLYN";
   message2 = "QUEENS";
