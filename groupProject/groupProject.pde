@@ -7,6 +7,7 @@ Table airData;
 
 float xPos;
 float yPos;
+float xNeedle, yNeedle;
 int boxSize = 20;
 boolean locked = false;
 float xOffset = 0.0; 
@@ -23,6 +24,9 @@ void setup() {
 
   xPos = width/12;
   yPos = height/2;
+  
+  xNeedle = width/12;
+  yNeedle = height/2;
   rectMode(RADIUS); 
   //drawing
   body = loadImage("body.png");
@@ -90,36 +94,36 @@ void showingPercentageBox(){
 }
 //_____________________________________________________________needle
 void movingNeedle(){
-  rect(xPos + 250, yPos + 325, boxSize/6, boxSize/2);
-  rect(xPos + 250, yPos + 280, boxSize, (boxSize * 2 )-2);
+  rect(xNeedle + 250, yNeedle + 325, boxSize/6, boxSize/2);
+  rect(xNeedle + 250, yNeedle + 280, boxSize, (boxSize * 2 )-2);
 }
 
 //____________________________________________________________[MOUSEPRESSED FUNCTION]
 void mousePressed() {
-  if(mouseX > xPos - boxSize && mouseX < xPos + boxSize && 
+  /*if(mouseX > xPos - boxSize && mouseX < xPos + boxSize && 
       mouseY > yPos - boxSize * 2 && mouseY < yPos + boxSize * 2) { 
     locked = true; 
   } else {
     locked = false;
   }
-  
+  */
   //needle
-  if(mouseX > xPos + 250 - boxSize/2 && mouseX < xPos + boxSize/2 && 
-      mouseY > yPos - boxSize && mouseY < yPos + boxSize){
+  if(mouseX > xNeedle + 250 - boxSize/2 && mouseX < xNeedle + boxSize/2 && 
+      mouseY > yNeedle - boxSize && mouseY < yNeedle + boxSize){
         locked = true; 
        } else {
         locked = false;
       }
   
-  xOffset = mouseX - xPos; 
-  yOffset = mouseY - yPos; 
+  xOffset = mouseX - xNeedle; 
+  yOffset = mouseY - yNeedle; 
 }
 
 //____________________________________________________________[MOUSEDRAGGED FUNCTION]
 void mouseDragged() {
   if(locked) {
-    xPos = mouseX - xOffset; 
-    yPos = mouseY - yOffset; 
+    xNeedle = mouseX - xOffset; 
+    yNeedle = mouseY - yOffset; 
   }
 }
 
