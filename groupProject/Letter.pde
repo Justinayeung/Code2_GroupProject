@@ -7,8 +7,9 @@ class Letter
   float velY;
   float alpha;
     
-  Letter(float posX, float posY, char letter)
+  Letter(float posX, float posY, char letter, float life_)
   {
+    life = life_;
     this.posX = posX + random(-2, 3);
     this.posY = posY + random(-40, 40);
     this.velX = random(-0.5, 0.5);
@@ -21,6 +22,7 @@ class Letter
     noStroke();
     fill(map(life, 50, 0, 200, 20));
     text(letter, posX, posY);
+    
   }
   
   void update() {

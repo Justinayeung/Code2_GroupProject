@@ -12,19 +12,18 @@ class Pollution
   
   Pollution(float posX, float posY, float life_, String message_)
   {
-    life = life_;
-    message = message_;
     this.posX = posX;
     this.posY = posY;
     letters = new ArrayList<Letter>();
     f = createFont("Arial", 10, true);
     textFont(f);
-    message_ = name;
+    life = life_;
+    name = message_;
     letter = new Letter[name.length()];
     int x = 16;
     for(int i = 0; i < name.length(); i++)
     {
-      letter[i] = new Letter(x, 100, name.charAt(i));
+      letter[i] = new Letter(x, 100, name.charAt(i), life);
       x += textWidth(name.charAt(i));
     }
   }
@@ -32,7 +31,7 @@ class Pollution
   void addLetters() {
     for(int i = 0; i < name.length(); i++)
     {
-      letters.add(new Letter(this.posX, this.posY, name.charAt(i)));
+      letters.add(new Letter(this.posX, this.posY, name.charAt(i), life));
     }
   }
 
@@ -45,7 +44,7 @@ class Pollution
     } 
 
     for (int i = letters.size() - 1; i >= 0; i--) {
-      Letter l = letters.get(i);
+      //Letter l = letters.get(i);
       if (life < 0) {
         letters.remove(i);
       }
