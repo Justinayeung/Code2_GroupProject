@@ -89,13 +89,14 @@ void draw() {
   image(body,xPos, yPos - 300);
   showingPercentageBox();
   Cross();
+  textSize(10);
   image(NYMap, 450, 0, 750, 750);
-  Banner();
   for (int i = 0; i < pollutions.size(); i++) {
     Pollution p = pollutions.get(i);
     p.addLetters();
     p.drawLetters();
   }
+  Banner();
   movingNeedle();
 }
 

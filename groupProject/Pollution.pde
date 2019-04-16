@@ -17,7 +17,7 @@ class Pollution
     this.posX = posX;
     this.posY = posY;
     letters = new ArrayList<Letter>();
-    f = createFont("Arial", 1, true);
+    f = createFont("Arial", 10, true);
     textFont(f);
     letter = new Letter[message.length()];  
     int x = 16;
