@@ -16,7 +16,7 @@ PImage body;
 
 PImage NYMap;
 
-String instruction = "Drag Needle To See Details";
+String instruction = "Drag The Needle To See Details";
 
 //ArrayList<Pollution> pollution;
 
@@ -119,10 +119,10 @@ void Banner(){
   rect(width/2 - 90, height/2, 60, height);
   
   pushMatrix();
-  translate(width/2 - 108, height/11 - 10);
+  translate(width/2 - 108, height/15 - 10);
   rotate(radians(90));
   fill(b2);
-  textSize(50);
+  textSize(45);
   text(instruction, 0, 0);
   popMatrix();
 }
