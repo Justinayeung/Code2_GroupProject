@@ -5,7 +5,6 @@ class Letter
   float posY;
   float velX;
   float velY;
-  float life;
   float alpha;
     
   Letter(float posX, float posY, char letter)
@@ -15,7 +14,6 @@ class Letter
     this.velX = random(-0.5, 0.5);
     this.velY = random(-5, 0);
     this.letter = letter;
-    life = 30;
     alpha = 180;
   }
   
