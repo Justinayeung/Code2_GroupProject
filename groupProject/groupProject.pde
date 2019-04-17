@@ -65,18 +65,18 @@ void setup() {
   union_lowerELife = airData.getFloat(10, "data_");
   lower_manhattanLife = airData.getFloat(11, "data_");
   
-  pollutions.add(new Pollution(200, 200, bronxLife, message0));
-  pollutions.add(new Pollution(600, 500, brooklynLife, message1));
-  //pollutions.add(new Pollution(x, y, queensLife, message2));
-  //pollutions.add(new Pollution(x, y, central_harlemLife, message3));
-  //pollutions.add(new Pollution(x, y, east_harlemLife, message4));
-  //pollutions.add(new Pollution(x, y, upperWLife, message5));
-  //pollutions.add(new Pollution(x, y, upperELife, message6));
-  //pollutions.add(new Pollution(x, y, chelseaLife, message7));
-  //pollutions.add(new Pollution(x, y, gramercy_murrayLife, message8));
-  //pollutions.add(new Pollution(x, y, greenwich_sohoLife, message9));
-  //pollutions.add(new Pollution(x, y, union_lowerELife, message10));
-  //pollutions.add(new Pollution(x, y, lower_manhattanLife, message11));
+  pollutions.add(new Pollution(1020, 170, bronxLife, message0));
+  pollutions.add(new Pollution(860, 640, brooklynLife, message1));
+  pollutions.add(new Pollution(1065, 523, queensLife, message2));
+  //pollutions.add(new Pollution(850, 260, central_harlemLife, message3));
+  //pollutions.add(new Pollution(865, 325, east_harlemLife, message4));
+  //pollutions.add(new Pollution(780, 370, upperWLife, message5));
+  //pollutions.add(new Pollution(830, 410, upperELife, message6));
+  //pollutions.add(new Pollution(730, 490, chelseaLife, message7));
+  //pollutions.add(new Pollution(775, 520, gramercy_murrayLife, message8));
+  //pollutions.add(new Pollution(725, 545, greenwich_sohoLife, message9));
+  //pollutions.add(new Pollution(751, 525, union_lowerELife, message10));
+  //pollutions.add(new Pollution(742, 588, lower_manhattanLife, message11));
 
   //pollution = new ArrayList<Pollution>();
 }
