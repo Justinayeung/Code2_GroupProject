@@ -63,18 +63,7 @@ class Letter
   
   void update() {
     alpha -= 20;
-    bronxLife = bronxLife - 10;
-    brooklynLife = brooklynLife - 10;
-    queensLife = queensLife - 5;
-    central_harlemLife = central_harlemLife - 10;
-    east_harlemLife = east_harlemLife - 10;
-    upperWLife = upperWLife - 10;
-    upperELife = upperELife - 10;
-    chelseaLife = chelseaLife - 10;
-    gramercy_murrayLife = gramercy_murrayLife - 10;
-    greenwich_sohoLife = greenwich_sohoLife - 10;
-    union_lowerELife = union_lowerELife - 10;
-    lower_manhattanLife = lower_manhattanLife - 10;
+    life = life - 5;
     this.posX += this.velX;
     this.posY += this.velY;
   }
