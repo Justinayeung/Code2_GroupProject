@@ -14,8 +14,35 @@ float xOffset = 0.0;
 float yOffset = 0.0; 
 PImage body;
 
+boolean overBronx = false;
+boolean overBrooklyn = false; 
+boolean overQueens = false;
+boolean overCentralHarlem = false;
+boolean overEastHarlem = false;
+boolean overUpperWestSide = false;
+boolean overUpperEastSide = false; 
+boolean overChelsea = false;
+boolean overGramercyMurray = false;
+boolean overGreenwichVillage = false;
+boolean overUnionSquare = false;
+boolean overLowerManhattan = false;
+
+float bronxPercentage = 0;
+float brooklynPercentage = 0;
+float queensPercentage = 0;
+float centralHarlemPercentage = 0;
+float eastHarlemPercentage = 0;
+float upperWestSidePercentage = 0;
+float upperEastSidePercentage = 0;
+float chelseaPercentage = 0;
+float gramercyMurrayPercentage = 0;
+float greenwichVillagePercentage = 0;
+float unionSquarePercentage = 0;
+float lowerManhattanPercentage = 0;
+
 PImage NYMap;
 
+ArrayList<PercentageBox> percentage;
 ArrayList<Pollution> pollutions;
 String message0 = "BRONX";
 String message1 = "BROOKLYN";
@@ -32,6 +59,7 @@ String message11 = "LOWER MANHATTAN";
 float bronxLife, brooklynLife, queensLife, central_harlemLife, east_harlemLife, upperWLife, upperELife, chelseaLife, gramercy_murrayLife, greenwich_sohoLife, union_lowerELife, lower_manhattanLife;
 String instruction = "Drag The Needle To See Details";
 
+color good, moderate, unhealthyForSensitiveGroups, unhealthy, veryUnhealthy, harzardous;
 //ArrayList<Pollution> pollution;
 
 //____________________________________________________________[SETUP FUNCTION]
@@ -51,6 +79,7 @@ void setup() {
   NYMap = loadImage("NYMap.png");
 
   pollutions = new ArrayList<Pollution>();
+  
   airData = loadTable("Air_Quality.csv", "header");
   bronxLife = airData.getFloat(0, "data_");
   brooklynLife = airData.getFloat(1, "data_");
@@ -77,6 +106,61 @@ void setup() {
   pollutions.add(new Pollution(725, 545, greenwich_sohoLife, message9));
   pollutions.add(new Pollution(751, 525, union_lowerELife, message10));
   pollutions.add(new Pollution(742, 588, lower_manhattanLife, message11));
+  
+  good = color(#24e228);
+  moderate = color(#fffd38);
+  unhealthyForSensitiveGroups = color(#fd7e23);
+  unhealthy = color(#fc0d1b);
+  veryUnhealthy = color(#8e4295);
+  harzardous = color(#7d0425);
+  
+  
+    for (TableRow row : airData.rows()) {
+
+    //int id = row.getInt("EventID");
+    String data = row.getString("data_");
+
+
+    switch(data) {
+    case "Bronx":
+      bronxPercentage++;
+      break;
+    case "Brooklyn":
+      brooklynPercentage++;
+      break;
+    case "Queens":
+      queensPercentage++;
+      break;
+    case "Central Harlem":
+      centralHarlemPercentage++;
+      break;
+    case "East Harlem":
+      eastHarlemPercentage++;
+      break;
+    case "Upper West Side":
+      upperWestSidePercentage++;
+      break;
+    case "Upper East Side":
+      upperEastSidePercentage++;
+      break;
+    case "Chelsea":
+      chelseaPercentage++;
+      break;
+    case "Gramercy Murray":
+      gramercyMurrayPercentage++;
+      break;
+    case "Greenwich Village":
+      greenwichVillagePercentage++;
+      break;
+    case "Union Square":
+      unionSquarePercentage++;
+      break;
+    case "Lower Manhattan":
+      lowerManhattanPercentage++;
+      break;
+    }
+    
+   }
 }
 
 //____________________________________________________________[DRAW FUNCTION]
@@ -122,9 +206,68 @@ void Cross(){
 //_________________________________________________________Percentage Box
 void showingPercentageBox(){
   pushMatrix();
-  translate(xPos + 125, yPos - 65);
-  fill(255,122,122);
-  rect( 0, 0, 96, 120);
+  rectMode(CORNER);
+  if(xNeedle > x & xNeedle < x & yNeedle > y & yNeedle < y){
+    overBronx = true;
+    rect(xPos + 125, yPos - 65, 96, bronxPercentage);
+    fill(good);
+  }
+  if(xNeedle > x & xNeedle < x & yNeedle > y & yNeedle < y){
+    overBrooklyn = true;
+    rect(xPos + 125, yPos - 65, 96, brooklynPercentage);
+    fill(good);
+  }
+  if(xNeedle > x & xNeedle < x & yNeedle > y & yNeedle < y){
+    overQueens = true;
+    rect(xPos + 125, yPos - 65, 96, queensPercentage);
+    fill(good);
+  }
+  if(xNeedle > x & xNeedle < x & yNeedle > y & yNeedle < y){
+    overCentralHarlem = true;
+    rect(xPos + 125, yPos - 65, 96, centralHarlemPercentage);
+    fill(moderate);
+  }
+  if(xNeedle > x & xNeedle < x & yNeedle > y & yNeedle < y){
+    overEastHarlem = true;
+    rect(xPos + 125, yPos - 65, 96, eastHarlemPercentage);
+    fill(moderate);
+  }
+  if(xNeedle > x & xNeedle < x & yNeedle > y & yNeedle < y){
+    overUpperWestSide = true;
+    rect(xPos + 125, yPos - 65, 96, upperWestSidePercentage);
+    fill(veryUnhealthy);
+  }
+  if(xNeedle > x & xNeedle < x & yNeedle > y & yNeedle < y){
+    overUpperEastSide = true;
+    rect(xPos + 125, yPos - 65, 96, upperEastSidePercentage);
+    fill(veryUnhealthy);
+  }
+  if(xNeedle > x & xNeedle < x & yNeedle > y & yNeedle < y){
+    overChelsea = true;
+    rect(xPos + 125, yPos - 65, 96, chelseaPercentage);
+    fill(veryUnhealthy);
+  }
+  if(xNeedle > x & xNeedle < x & yNeedle > y & yNeedle < y){
+    overGramercyMurray = true;
+    rect(xPos + 125, yPos - 65, 96, gramercyMurrayPercentage);
+    fill(veryUnhealthy);
+  }
+  if(xNeedle > x & xNeedle < x & yNeedle > y & yNeedle < y){
+    overGreenwichVillage = true;
+    rect(xPos + 125, yPos - 65, 96, greenwichVillagePercentage);
+    fill(unhealthyForSensitiveGroups);
+  }
+  if(xNeedle > x & xNeedle < x & yNeedle > y & yNeedle < y){
+    overUnionSquare = true;
+    rect(xPos + 125, yPos - 65, 96, unionSquarePercentage);
+    fill(unhealthyForSensitiveGroups);
+  }
+  if(xNeedle > x & xNeedle < x & yNeedle > y & yNeedle < y){
+    overLowerManhattan = true;
+    rect(xPos + 125, yPos - 65, 96, lowerManhattanPercentage);
+    fill(unhealthyForSensitiveGroups);
+  }
+  
   popMatrix();
 }
 //__________________________________________________________________needle

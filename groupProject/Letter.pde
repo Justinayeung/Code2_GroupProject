@@ -8,6 +8,7 @@ class Letter
   float alpha;
   float life;
   String location;
+ 
   
   Letter(float posX, float posY, char letter, float life_)
   {
