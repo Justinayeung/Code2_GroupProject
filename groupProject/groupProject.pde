@@ -32,6 +32,20 @@ String message11 = "LOWER MANHATTAN";
 float bronxLife, brooklynLife, queensLife, central_harlemLife, east_harlemLife, upperWLife, upperELife, chelseaLife, gramercy_murrayLife, greenwich_sohoLife, union_lowerELife, lower_manhattanLife;
 String instruction = "Drag The Needle To See Details";
 
+//____________________________________________________________region PShapes
+PShape Bronx_Shape;
+PShape CentralHarlem_Shape;
+PShape EastHarlem_Shape;
+PShape UpperWestSide_Shape;
+PShape UpperEastSide_Shape;
+PShape Chelsea_Shape;
+PShape GramercyPark_Shape;
+PShape UnionSquare_Shape;
+PShape GreenwichVillage_Shape;
+PShape LowerManhattan_Shape;
+PShape Queens_Shape;
+PShape Brooklyn_Shape;
+
 //ArrayList<Pollution> pollution;
 
 //____________________________________________________________[SETUP FUNCTION]
@@ -77,6 +91,174 @@ void setup() {
   pollutions.add(new Pollution(725, 545, greenwich_sohoLife, message9));
   pollutions.add(new Pollution(751, 525, union_lowerELife, message10));
   pollutions.add(new Pollution(742, 588, lower_manhattanLife, message11));
+
+//____________________________________________________________region PShapes
+  Bronx_Shape = createShape();
+  Bronx_Shape.beginShape();
+  Bronx_Shape.noStroke();
+  Bronx_Shape.vertex(937, 25);
+  Bronx_Shape.vertex(1200, 119);
+  Bronx_Shape.vertex(1182, 345);
+  Bronx_Shape.vertex(935, 380);
+  Bronx_Shape.vertex(888, 349);
+  Bronx_Shape.vertex(884, 264);
+  Bronx_Shape.vertex(946, 148);
+  Bronx_Shape.vertex(906, 132);
+  Bronx_Shape.endShape(CLOSE);
+  
+  CentralHarlem_Shape = createShape();
+  CentralHarlem_Shape.beginShape();
+  CentralHarlem_Shape.noStroke();
+  CentralHarlem_Shape.vertex(905,140);
+  CentralHarlem_Shape.vertex(935,155);
+  CentralHarlem_Shape.vertex(878,262);
+  CentralHarlem_Shape.vertex(880,318);
+  CentralHarlem_Shape.vertex(844,379);
+  CentralHarlem_Shape.vertex(828,370);
+  CentralHarlem_Shape.vertex(813,397);
+  CentralHarlem_Shape.vertex(787,383);
+  CentralHarlem_Shape.endShape(CLOSE);
+  
+  EastHarlem_Shape = createShape();
+  EastHarlem_Shape.beginShape();
+  EastHarlem_Shape.noStroke();
+  EastHarlem_Shape.vertex(880,326);
+  EastHarlem_Shape.vertex(882,352);
+  EastHarlem_Shape.vertex(894,372);
+  EastHarlem_Shape.vertex(892,387);
+  EastHarlem_Shape.vertex(861,421);
+  EastHarlem_Shape.vertex(834,410);
+  EastHarlem_Shape.endShape(CLOSE);
+  
+  UpperWestSide_Shape = createShape();
+  UpperWestSide_Shape.beginShape();
+  UpperWestSide_Shape.noStroke();
+  UpperWestSide_Shape.vertex(785,389);
+  UpperWestSide_Shape.vertex(809,403);
+  UpperWestSide_Shape.vertex(775,466);
+  UpperWestSide_Shape.vertex(749,453);
+  UpperWestSide_Shape.vertex(772,401);
+  UpperWestSide_Shape.vertex(785,389);
+  UpperWestSide_Shape.endShape(CLOSE);
+  
+  UpperEastSide_Shape = createShape();
+  UpperEastSide_Shape.beginShape();
+  UpperEastSide_Shape.noStroke();
+  UpperEastSide_Shape.vertex(832,414);
+  UpperEastSide_Shape.vertex(861,429);
+  UpperEastSide_Shape.vertex(864,445);
+  UpperEastSide_Shape.vertex(829,495);
+  UpperEastSide_Shape.vertex(798,478);
+  UpperEastSide_Shape.endShape(CLOSE);
+  
+  Chelsea_Shape = createShape();
+  Chelsea_Shape.beginShape();
+  Chelsea_Shape.noStroke();
+  Chelsea_Shape.vertex(724,496);
+  Chelsea_Shape.vertex(764,519);
+  Chelsea_Shape.vertex(740,560);
+  Chelsea_Shape.vertex(713,544);
+  Chelsea_Shape.vertex(712,518);
+  Chelsea_Shape.endShape(CLOSE);
+  
+  GramercyPark_Shape = createShape();
+  GramercyPark_Shape.beginShape();
+  GramercyPark_Shape.noStroke();
+  GramercyPark_Shape.vertex(764,535);
+  GramercyPark_Shape.vertex(789,552);
+  GramercyPark_Shape.vertex(772,579);
+  GramercyPark_Shape.vertex(761,573);
+  GramercyPark_Shape.vertex(771,556);
+  GramercyPark_Shape.vertex(757,547);
+  GramercyPark_Shape.endShape(CLOSE);
+  
+  UnionSquare_Shape = createShape();
+  UnionSquare_Shape.beginShape();
+  UnionSquare_Shape.noStroke();
+  UnionSquare_Shape.vertex(753,550);
+  UnionSquare_Shape.vertex(763,556);
+  UnionSquare_Shape.vertex(756,569);
+  UnionSquare_Shape.vertex(746,563);
+  UnionSquare_Shape.endShape(CLOSE);
+  
+  GreenwichVillage_Shape = createShape();
+  GreenwichVillage_Shape.beginShape();
+  GreenwichVillage_Shape.noStroke();
+  GreenwichVillage_Shape.vertex(713,550);
+  GreenwichVillage_Shape.vertex(754,576);
+  GreenwichVillage_Shape.vertex(752,587);
+  GreenwichVillage_Shape.vertex(739,605);
+  GreenwichVillage_Shape.vertex(728,595);
+  GreenwichVillage_Shape.vertex(708,593);
+  GreenwichVillage_Shape.endShape(CLOSE);
+  
+  LowerManhattan_Shape = createShape();
+  LowerManhattan_Shape.beginShape();
+  LowerManhattan_Shape.noStroke();
+  LowerManhattan_Shape.vertex(707,598);
+  LowerManhattan_Shape.vertex(725,599);
+  LowerManhattan_Shape.vertex(739,611);
+  LowerManhattan_Shape.vertex(757,590);
+  LowerManhattan_Shape.vertex(790,609);
+  LowerManhattan_Shape.vertex(782,640);
+  LowerManhattan_Shape.vertex(736,647);
+  LowerManhattan_Shape.vertex(712,667);
+  LowerManhattan_Shape.vertex(698,667);
+  LowerManhattan_Shape.vertex(695,651);
+  LowerManhattan_Shape.endShape(CLOSE);
+  
+  Queens_Shape = createShape();
+  Queens_Shape.beginShape();
+  Queens_Shape.noStroke();
+  Queens_Shape.vertex(1089,741);
+  Queens_Shape.vertex(1081,701);
+  Queens_Shape.vertex(1064,707);
+  Queens_Shape.vertex(1061,679);
+  Queens_Shape.vertex(1030,667);
+  Queens_Shape.vertex(1008,689);
+  Queens_Shape.vertex(1001,686);
+  Queens_Shape.vertex(989,695);
+  Queens_Shape.vertex(919,627);
+  Queens_Shape.vertex(904,587);
+  Queens_Shape.vertex(882,579);
+  Queens_Shape.vertex(871,561);
+  Queens_Shape.vertex(837,543);
+  Queens_Shape.vertex(821,558);
+  Queens_Shape.vertex(830,527);
+  Queens_Shape.vertex(878,444);
+  Queens_Shape.vertex(939,402);
+  Queens_Shape.vertex(1080,491);
+  Queens_Shape.vertex(1053,415);
+  Queens_Shape.vertex(1146,370);
+  Queens_Shape.vertex(1200,387);
+  Queens_Shape.vertex(1200,739);
+  Queens_Shape.endShape(CLOSE);
+  
+  Brooklyn_Shape = createShape();
+  Brooklyn_Shape.beginShape();
+  Brooklyn_Shape.noStroke();
+  Brooklyn_Shape.vertex(692,739);
+  Brooklyn_Shape.vertex(723,713);
+  Brooklyn_Shape.vertex(742,667);
+  Brooklyn_Shape.vertex(778,656);
+  Brooklyn_Shape.vertex(797,678);
+  Brooklyn_Shape.vertex(798,657);
+  Brooklyn_Shape.vertex(826,600);
+  Brooklyn_Shape.vertex(821,570);
+  Brooklyn_Shape.vertex(835,553);
+  Brooklyn_Shape.vertex(862,567);
+  Brooklyn_Shape.vertex(875,586);
+  Brooklyn_Shape.vertex(895,593);
+  Brooklyn_Shape.vertex(910,630);
+  Brooklyn_Shape.vertex(986,704);
+  Brooklyn_Shape.vertex(1002,695);
+  Brooklyn_Shape.vertex(1010,697);
+  Brooklyn_Shape.vertex(1033,674);
+  Brooklyn_Shape.vertex(1053,683);
+  Brooklyn_Shape.vertex(1057,717);
+  Brooklyn_Shape.vertex(1078,710);
+  Brooklyn_Shape.vertex(1083,740);
+  Brooklyn_Shape.endShape(CLOSE);
 }
 
 //____________________________________________________________[DRAW FUNCTION]
@@ -95,6 +277,21 @@ void draw() {
   }
   Banner();
   movingNeedle();
+  
+  //println (mouseX +", " + mouseY);
+//____________________________________________________________region PShapes
+  //shape(Bronx_Shape);
+  //shape(CentralHarlem_Shape);
+  //shape(EastHarlem_Shape);
+  //shape(UpperWestSide_Shape);
+  //shape(UpperEastSide_Shape);
+  //shape(Chelsea_Shape);
+  //shape(GramercyPark_Shape);
+  //shape(UnionSquare_Shape);
+  //shape(GreenwichVillage_Shape);
+  //shape(LowerManhattan_Shape);
+  //shape(Queens_Shape);
+  //shape(Brooklyn_Shape);
 }
 
 //____________________________________________________________[CROSS CLASS]
@@ -164,7 +361,7 @@ void mousePressed() {
        } else {
         locked = false;
       }
-  println(locked);
+  //println(locked);
   xOffset = mouseX - xNeedle; 
   yOffset = mouseY - yNeedle; 
 }
