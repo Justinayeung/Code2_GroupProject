@@ -2,6 +2,16 @@
 //https://processing.org/tutorials/text/
 //https://github.com/Justinayeung/Code2_GroupProject/tree/master/groupProject/Particles
 
+  /*
+  good = 0 - 50 (#24e228);
+  moderate = 51 -100 (#fffd38);
+  unhealthyForSensitiveGroups = 101 - 150 (#fd7e23);
+  unhealthy = 151 - 200 (#fc0d1b);
+  veryUnhealthy = 201 - 300 (#8e4295);
+  harzardous = 301 - 500 (#7d0425);
+  */
+  
+
 //____________________________________________________________[VARIABLES]
 Table airData;
 
@@ -56,6 +66,7 @@ String message9 = "GREENWICH VILLAGE";
 String message10 = "UNION SQUARE";
 String message11 = "LOWER MANHATTAN";
 float bronxLife, brooklynLife, queensLife, central_harlemLife, east_harlemLife, upperWLife, upperELife, chelseaLife, gramercy_murrayLife, greenwich_sohoLife, union_lowerELife, lower_manhattanLife;
+float bronxAPH, brooklynAPH, queensAPH, central_harlemAPH, east_harlemAPH, upperWAPH, upperEAPH, chelseaAPH, gramercy_murrayAPH, greenwich_sohoAPH, union_lowerEAPH, lower_manhattanAPH;
 String instruction = "Drag The Needle To See Details";
 
 
@@ -83,8 +94,8 @@ void setup() {
   xPos = width/12;
   yPos = height/2;
   
-  xNeedle = width/12 + 250;
-  yNeedle = height/2 + 280;
+  xNeedle = width/12 + 125;
+  yNeedle = height/2 + 138;
   rectMode(RADIUS); 
   //drawing
   body = loadImage("body.png");
@@ -108,18 +119,31 @@ void setup() {
   union_lowerELife = airData.getFloat(10, "data_");
   lower_manhattanLife = airData.getFloat(11, "data_");
   
-  //pollutions.add(new Pollution(1020, 170, bronxLife, message0));
-  //pollutions.add(new Pollution(860, 640, brooklynLife, message1));
-  //pollutions.add(new Pollution(1065, 523, queensLife, message2));
-  //pollutions.add(new Pollution(850, 260, central_harlemLife, message3));
-  //pollutions.add(new Pollution(865, 325, east_harlemLife, message4));
-  //pollutions.add(new Pollution(780, 370, upperWLife, message5));
-  //pollutions.add(new Pollution(830, 410, upperELife, message6));
-  //pollutions.add(new Pollution(730, 490, chelseaLife, message7));
-  //pollutions.add(new Pollution(775, 520, gramercy_murrayLife, message8));
-  //pollutions.add(new Pollution(725, 545, greenwich_sohoLife, message9));
-  //pollutions.add(new Pollution(751, 525, union_lowerELife, message10));
-  //pollutions.add(new Pollution(742, 588, lower_manhattanLife, message11));
+  bronxAPH = airData.getFloat(12, "data_");
+  brooklynAPH = airData.getFloat(13, "data_");
+  queensAPH = airData.getFloat(14, "data_");
+  central_harlemAPH = airData.getFloat(15, "data_");
+  east_harlemAPH = airData.getFloat(16, "data_");
+  upperWAPH = airData.getFloat(17, "data_");
+  upperEAPH = airData.getFloat(18, "data_");
+  chelseaAPH = airData.getFloat(19, "data_");
+  gramercy_murrayAPH = airData.getFloat(20, "data_");
+  greenwich_sohoAPH = airData.getFloat(21, "data_");
+  union_lowerEAPH = airData.getFloat(22, "data_");
+  lower_manhattanAPH = airData.getFloat(23, "data_");
+  
+  pollutions.add(new Pollution(1020, 170, bronxLife, message0));
+  pollutions.add(new Pollution(860, 640, brooklynLife, message1));
+  pollutions.add(new Pollution(1065, 523, queensLife, message2));
+  pollutions.add(new Pollution(850, 260, central_harlemLife, message3));
+  pollutions.add(new Pollution(865, 325, east_harlemLife, message4));
+  pollutions.add(new Pollution(780, 370, upperWLife, message5));
+  pollutions.add(new Pollution(830, 410, upperELife, message6));
+  pollutions.add(new Pollution(730, 490, chelseaLife, message7));
+  pollutions.add(new Pollution(775, 520, gramercy_murrayLife, message8));
+  pollutions.add(new Pollution(725, 545, greenwich_sohoLife, message9));
+  pollutions.add(new Pollution(751, 525, union_lowerELife, message10));
+  pollutions.add(new Pollution(742, 588, lower_manhattanLife, message11));
   
   good = color(#24e228);
   moderate = color(#fffd38);
