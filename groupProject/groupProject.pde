@@ -7,7 +7,7 @@ Table airData;
 
 float xPos;
 float yPos;
-float xNeedle, yNeedle, _xNeedle, _yNeedle;
+float xNeedle, yNeedle;
 int boxSize = 20;
 boolean locked = false;
 float xOffset = 0.0; 
@@ -27,18 +27,18 @@ boolean overGreenwichVillage = false;
 boolean overUnionSquare = false;
 boolean overLowerManhattan = false;
 
-float bronxPercentage = 0;
-float brooklynPercentage = 0;
-float queensPercentage = 0;
-float centralHarlemPercentage = 0;
-float eastHarlemPercentage = 0;
-float upperWestSidePercentage = 0;
-float upperEastSidePercentage = 0;
-float chelseaPercentage = 0;
-float gramercyMurrayPercentage = 0;
-float greenwichVillagePercentage = 0;
-float unionSquarePercentage = 0;
-float lowerManhattanPercentage = 0;
+//float bronxPercentage = 0;
+//float brooklynPercentage = 0;
+//float queensPercentage = 0;
+//float centralHarlemPercentage = 0;
+//float eastHarlemPercentage = 0;
+//float upperWestSidePercentage = 0;
+//float upperEastSidePercentage = 0;
+//float chelseaPercentage = 0;
+//float gramercyMurrayPercentage = 0;
+//float greenwichVillagePercentage = 0;
+//float unionSquarePercentage = 0;
+//float lowerManhattanPercentage = 0;
 
 PImage NYMap;
 
@@ -108,18 +108,18 @@ void setup() {
   union_lowerELife = airData.getFloat(10, "data_");
   lower_manhattanLife = airData.getFloat(11, "data_");
   
-  pollutions.add(new Pollution(1020, 170, bronxLife, message0));
-  pollutions.add(new Pollution(860, 640, brooklynLife, message1));
-  pollutions.add(new Pollution(1065, 523, queensLife, message2));
-  pollutions.add(new Pollution(850, 260, central_harlemLife, message3));
-  pollutions.add(new Pollution(865, 325, east_harlemLife, message4));
-  pollutions.add(new Pollution(780, 370, upperWLife, message5));
-  pollutions.add(new Pollution(830, 410, upperELife, message6));
-  pollutions.add(new Pollution(730, 490, chelseaLife, message7));
-  pollutions.add(new Pollution(775, 520, gramercy_murrayLife, message8));
-  pollutions.add(new Pollution(725, 545, greenwich_sohoLife, message9));
-  pollutions.add(new Pollution(751, 525, union_lowerELife, message10));
-  pollutions.add(new Pollution(742, 588, lower_manhattanLife, message11));
+  //pollutions.add(new Pollution(1020, 170, bronxLife, message0));
+  //pollutions.add(new Pollution(860, 640, brooklynLife, message1));
+  //pollutions.add(new Pollution(1065, 523, queensLife, message2));
+  //pollutions.add(new Pollution(850, 260, central_harlemLife, message3));
+  //pollutions.add(new Pollution(865, 325, east_harlemLife, message4));
+  //pollutions.add(new Pollution(780, 370, upperWLife, message5));
+  //pollutions.add(new Pollution(830, 410, upperELife, message6));
+  //pollutions.add(new Pollution(730, 490, chelseaLife, message7));
+  //pollutions.add(new Pollution(775, 520, gramercy_murrayLife, message8));
+  //pollutions.add(new Pollution(725, 545, greenwich_sohoLife, message9));
+  //pollutions.add(new Pollution(751, 525, union_lowerELife, message10));
+  //pollutions.add(new Pollution(742, 588, lower_manhattanLife, message11));
   
   good = color(#24e228);
   moderate = color(#fffd38);
@@ -130,54 +130,53 @@ void setup() {
   
   
   
-    for (TableRow row : airData.rows()) {
+    //for (TableRow row : airData.rows()) {
 
-    //int id = row.getInt("EventID");
-    String data = row.getString("data_");
+    ////int id = row.getInt("EventID");
+    //float data = row.getFloat("data_");
 
 
-    switch(data) {
-    case "Bronx":
-      bronxPercentage++;
-      break;
-    case "Brooklyn":
-      brooklynPercentage++;
-      break;
-    case "Queens":
-      queensPercentage++;
-      break;
-    case "Central Harlem":
-      centralHarlemPercentage++;
-      break;
-    case "East Harlem":
-      eastHarlemPercentage++;
-      break;
-    case "Upper West Side":
-      upperWestSidePercentage++;
-      break;
-    case "Upper East Side":
-      upperEastSidePercentage++;
-      break;
-    case "Chelsea":
-      chelseaPercentage++;
-      break;
-    case "Gramercy Murray":
-      gramercyMurrayPercentage++;
-      break;
-    case "Greenwich Village":
-      greenwichVillagePercentage++;
-      break;
-    case "Union Square":
-      unionSquarePercentage++;
-      break;
-    case "Lower Manhattan":
-      lowerManhattanPercentage++;
-      break;
-    }
+    //switch(data) {
+    //case "Bronx":
+    //  bronxPercentage++;
+    //  break;
+    //case "Brooklyn":
+    //  brooklynPercentage++;
+    //  break;
+    //case "Queens":
+    //  queensPercentage++;
+    //  break;
+    //case "Central Harlem":
+    //  centralHarlemPercentage++;
+    //  break;
+    //case "East Harlem":
+    //  eastHarlemPercentage++;
+    //  break;
+    //case "Upper West Side":
+    //  upperWestSidePercentage++;
+    //  break;
+    //case "Upper East Side":
+    //  upperEastSidePercentage++;
+    //  break;
+    //case "Chelsea":
+    //  chelseaPercentage++;
+    //  break;
+    //case "Gramercy Murray":
+    //  gramercyMurrayPercentage++;
+    //  break;
+    //case "Greenwich Village":
+    //  greenwichVillagePercentage++;
+    //  break;
+    //case "Union Square":
+    //  unionSquarePercentage++;
+    //  break;
+    //case "Lower Manhattan":
+    //  lowerManhattanPercentage++;
+    //  break;
+    //}
     
-    //if(mouseX
     
-   }
+  // }
 
 //____________________________________________________________region PShapes
   Bronx_Shape = createShape();
@@ -350,10 +349,74 @@ void setup() {
 
 //____________________________________________________________[DRAW FUNCTION]
 void draw() { 
+  if(xNeedle > 956 && xNeedle < 1113 && yNeedle + 55 > 139 && yNeedle + 55 < 278){
+      overBronx = true;
+    }else {
+      overBronx = false;
+    }
+  if(xNeedle > 806 && xNeedle < 930 && yNeedle + 55 > 650 && yNeedle + 55 < 735){
+      overBrooklyn = true;
+    }else {
+      overBrooklyn = false;
+    }
+  if(xNeedle > 936 && xNeedle < 1190 && yNeedle + 55 > 500 && yNeedle + 55 < 625){
+      overQueens = true;
+    }else {
+      overQueens = false;
+    }
+  if(xNeedle > 832 && xNeedle < 868 && yNeedle + 55 > 289 && yNeedle + 55 < 337){
+      overCentralHarlem = true;
+    }else {
+      overCentralHarlem = false;
+    }
+  if(xNeedle > 852 && xNeedle < 890 && yNeedle + 55 > 361 && yNeedle + 55 < 399){
+      overEastHarlem = true;
+    }else {
+      overEastHarlem = false;
+    }
+  if(xNeedle > 765 && xNeedle < 798 && yNeedle + 55 > 398 && yNeedle + 55 < 455){
+      overUpperWestSide = true;
+    }else {
+      overUpperWestSide = false;
+    }
+  if(xNeedle > 814 && xNeedle < 853 && yNeedle + 55 > 430 && yNeedle + 55 < 486){
+      overUpperEastSide = true;
+    }else {
+      overUpperEastSide = false;
+    }
+  if(xNeedle > 713 && xNeedle < 750 && yNeedle + 55 > 507 && yNeedle + 55 < 541){
+      overChelsea = true;
+    }else {
+      overChelsea = false;
+    }
+  if(xNeedle > 769 && xNeedle < 799 && yNeedle + 55 > 542 && yNeedle + 55 < 578){
+      overGramercyMurray = true;
+    }else {
+      overGramercyMurray = false;
+    }
+  if(xNeedle > 707 && xNeedle < 746 && yNeedle + 55 > 565 && yNeedle + 55 < 594){
+      overGreenwichVillage = true;
+    }else {
+      overGreenwichVillage = false;
+    }
+  if(xNeedle > 749 && xNeedle < 761 && yNeedle + 55 > 552 && yNeedle + 55 < 568){
+      overUnionSquare = true;
+    }else {
+      overUnionSquare = false;
+    }
+  if(xNeedle > 705 && xNeedle < 782 && yNeedle + 55 > 608 && yNeedle + 55 < 653){
+      overLowerManhattan = true;
+    }else {
+      overLowerManhattan = false;
+    }
   background(220, 10, 100);
   fill(0);
   image(body,xPos, yPos - 300);
+//_____________________________________________________________showingPercentageBox();
   showingPercentageBox();
+  
+  
+//___________________________________________________________________
   Cross();
   textSize(10);
   image(NYMap, 450, 0, 750, 750);
@@ -364,6 +427,8 @@ void draw() {
   }
   Banner();
   movingNeedle();
+  
+  println (mouseX +"," + mouseY);
   
   //println (mouseX +", " + mouseY);
 //____________________________________________________________region PShapes
@@ -405,58 +470,55 @@ void Cross(){
 }
 //_________________________________________________________Percentage Box
 void showingPercentageBox(){
-  pushMatrix();
-  //rectMode(CORNER);
   if(overBronx == true){
-    rect(xPos + 125, yPos - 65, 96, bronxPercentage);
     fill(good);
+    rect(xPos + 125, yPos +36, 96, bronxLife * .5);
   }
   if(overBrooklyn == true){
-    rect(xPos + 125, yPos - 65, 96, brooklynPercentage);
     fill(good);
+    rect(xPos + 125, yPos + 45, 96, brooklynLife * .5);
   }
   if(overQueens == true){
-    rect(xPos + 125, yPos - 65, 96, queensPercentage);
     fill(good);
+    rect(xPos + 125, yPos + 49, 96, queensLife * .5);
   }
   if(overCentralHarlem == true){
-    rect(xPos + 125, yPos - 65, 96, centralHarlemPercentage);
     fill(moderate);
+    rect(xPos + 125, yPos + 15, 96, central_harlemLife * .5);
   }
   if(overEastHarlem == true){
-    rect(xPos + 125, yPos - 65, 96, eastHarlemPercentage);
     fill(moderate);
+    rect(xPos + 125, yPos + 29, 96, east_harlemLife * .5);
   }
   if(overUpperWestSide == true){
-    rect(xPos + 125, yPos - 65, 96, upperWestSidePercentage);
     fill(veryUnhealthy);
+    rect(xPos + 125, yPos - 65, 96, upperWLife * .5);
   }
   if(overUpperEastSide == true){
-    rect(xPos + 125, yPos - 65, 96, upperEastSidePercentage);
     fill(veryUnhealthy);
+    rect(xPos + 125, yPos - 77, 96, upperELife * .5);
   }
   if(overChelsea == true){
-    rect(xPos + 125, yPos - 65, 96, chelseaPercentage);
     fill(veryUnhealthy);
+    rect(xPos + 125, yPos - 45, 96, chelseaLife * .5);
   }
   if(overGramercyMurray == true){
-    rect(xPos + 125, yPos - 65, 96, gramercyMurrayPercentage);
     fill(veryUnhealthy);
+    rect(xPos + 125, yPos - 85, 96,  gramercy_murrayLife * .5);
   }
   if(overGreenwichVillage == true){
-    rect(xPos + 125, yPos - 65, 96, greenwichVillagePercentage);
     fill(unhealthyForSensitiveGroups);
+    rect(xPos + 125, yPos - 9, 96, greenwich_sohoLife * .5);
   }
   if(overUnionSquare == true){
-    rect(xPos + 125, yPos - 65, 96, unionSquarePercentage);
     fill(unhealthyForSensitiveGroups);
+    rect(xPos + 125, yPos - 6, 96, union_lowerELife * .5);
   }
   if(overLowerManhattan == true){
-    rect(xPos + 125, yPos - 65, 96, lowerManhattanPercentage);
     fill(unhealthyForSensitiveGroups);
+    rect(xPos + 125, yPos - 2, 96, lower_manhattanLife * .5);
   }
   
-  popMatrix();
 }
 //__________________________________________________________________needle
 void movingNeedle(){
