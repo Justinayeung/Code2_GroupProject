@@ -445,12 +445,11 @@ void draw() {
     }else {
       overLowerManhattan = false;
     }
-  background(220, 10, 100);
+  background(228, 100, 130);  //220, 10, 100 //228, 94, 157 //227, 138, 174 
   fill(0);
   image(body,xPos, yPos - 300);
 //_____________________________________________________________showingPercentageBox();
   showingPercentageBox();
-  
   
 //___________________________________________________________________
   Cross();
