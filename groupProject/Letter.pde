@@ -23,42 +23,7 @@ class Letter
   
   void display() {
     noStroke();
-    if(life == bronxLife) {
-      fill(map(bronxLife, 50, 0, 200, 20));
-    }
-    if(life == brooklynLife) {
-      fill(map(brooklynLife, 50, 0, 200, 20));
-    }
-    if(life == queensLife) {
-      fill(map(queensLife, 50, 0, 200, 20));
-    }
-    if(life == central_harlemLife) {
-      fill(map(central_harlemLife, 50, 0, 200, 20));
-    }
-    if(life == east_harlemLife) {
-      fill(map(east_harlemLife, 50, 0, 200, 20));
-    }
-    if(life == upperWLife) {
-      fill(map(upperWLife, 50, 0, 200, 20));
-    }
-    if(life == upperELife) {
-      fill(map(upperELife, 50, 0, 200, 20));
-    }
-    if(life == chelseaLife) {
-      fill(map(chelseaLife, 50, 0, 200, 20));
-    }
-    if(life == gramercy_murrayLife) {
-      fill(map(gramercy_murrayLife, 50, 0, 200, 20));
-    }
-    if(life == greenwich_sohoLife) {
-      fill(map(greenwich_sohoLife, 50, 0, 200, 20));
-    }
-    if(life == union_lowerELife) {
-      fill(map(union_lowerELife, 50, 0, 200, 20));
-    }
-    if(life == lower_manhattanLife) {
-      fill(map(lower_manhattanLife, 50, 0, 200, 20));
-    }
+    fill(map(life, 50, 100, 100, 0));
     text(letter, posX, posY);
   }
   

@@ -42,7 +42,7 @@ class Pollution
     }
     for(int i = letters.size() - 1; i >= 0; i--) {
       Letter l = letters.get(i);
-      if(l.life < 0) {
+      if(l.life < 3) {
         letters.remove(i);
       }
     }
