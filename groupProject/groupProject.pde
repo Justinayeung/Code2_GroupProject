@@ -69,6 +69,18 @@ float bronxLife, brooklynLife, queensLife, central_harlemLife, east_harlemLife, 
 float bronxAPH, brooklynAPH, queensAPH, central_harlemAPH, east_harlemAPH, upperWAPH, upperEAPH, chelseaAPH, gramercy_murrayAPH, greenwich_sohoAPH, union_lowerEAPH, lower_manhattanAPH;
 String instruction = "Drag The Needle To See Details";
 
+String bronx = "BRONX : \nTotal NOx Emissions = 42.7";
+String brooklyn = "BROOKLYN : \nTotal NOx Emissions = 22.8";
+String queens = "QUEENS : \nTotal NOx Emissions = 16.1";
+String central_harlem = "CENTRAL HARLEM : \nTotal NOx Emissions = 82.1";
+String east_harlem = "EAST HARLEM : \nTotal NOx Emissions = 55.8";
+String upperW = "UPPER WEST SIDE : \nTotal NOx Emissions = 247.9";
+String upperE = "UPPER EAST SIDE : \nTotal NOx Emissions = 269.8";
+String chelsea = "CHELSEA : \nTotal NOx Emissions = 204.8";
+String gramercy_murray = "GRAMERCY MURRAY : \nTotal NOx Emissions = 284.7";
+String greenwich = "GREENWICH VILLAGE : \nTotal NOx Emissions = 132.5";
+String union = "UNION SQUARE : \nTotal NOx Emissions = 126.1";
+String lower_manhattan = "LOWER MANHATTAN : \nTotal NOx Emissions = 118.7";
 
 color good, moderate, unhealthyForSensitiveGroups, unhealthy, veryUnhealthy, harzardous;
 
@@ -494,53 +506,79 @@ void Cross(){
 }
 //_________________________________________________________Percentage Box
 void showingPercentageBox(){
+  float textYPos = 180;
+  
   if(overBronx == true){
     fill(good);
     rect(xPos + 125, yPos +36, 96, bronxLife * .5);
+    textSize(25);
+    text(bronx,xPos, yPos + textYPos);
   }
   if(overBrooklyn == true){
     fill(good);
     rect(xPos + 125, yPos + 45, 96, brooklynLife * .5);
+    textSize(25);
+    text(brooklyn,xPos, yPos + textYPos);
   }
   if(overQueens == true){
     fill(good);
     rect(xPos + 125, yPos + 49, 96, queensLife * .5);
+    textSize(25);
+    text(queens,xPos, yPos + textYPos);
   }
   if(overCentralHarlem == true){
     fill(moderate);
     rect(xPos + 125, yPos + 15, 96, central_harlemLife * .5);
+    textSize(25);
+    text(central_harlem,xPos, yPos + textYPos);
   }
   if(overEastHarlem == true){
     fill(moderate);
     rect(xPos + 125, yPos + 29, 96, east_harlemLife * .5);
+    textSize(25);
+    text(east_harlem,xPos, yPos + textYPos);
   }
   if(overUpperWestSide == true){
     fill(veryUnhealthy);
     rect(xPos + 125, yPos - 65, 96, upperWLife * .5);
+    textSize(25);
+    text(upperW,xPos, yPos + textYPos);
   }
   if(overUpperEastSide == true){
     fill(veryUnhealthy);
     rect(xPos + 125, yPos - 77, 96, upperELife * .5);
+    textSize(25);
+    text(upperE,xPos, yPos + textYPos);
   }
   if(overChelsea == true){
     fill(veryUnhealthy);
     rect(xPos + 125, yPos - 45, 96, chelseaLife * .5);
+    textSize(25);
+    text(chelsea,xPos, yPos + textYPos);
   }
   if(overGramercyMurray == true){
     fill(veryUnhealthy);
     rect(xPos + 125, yPos - 85, 96,  gramercy_murrayLife * .5);
+    textSize(25);
+    text(gramercy_murray,xPos, yPos + textYPos);
   }
   if(overGreenwichVillage == true){
     fill(unhealthyForSensitiveGroups);
     rect(xPos + 125, yPos - 9, 96, greenwich_sohoLife * .5);
+    textSize(25);
+    text(greenwich,xPos, yPos + textYPos);
   }
   if(overUnionSquare == true){
     fill(unhealthyForSensitiveGroups);
     rect(xPos + 125, yPos - 6, 96, union_lowerELife * .5);
+    textSize(25);
+    text(union,xPos, yPos + textYPos);
   }
   if(overLowerManhattan == true){
     fill(unhealthyForSensitiveGroups);
     rect(xPos + 125, yPos - 2, 96, lower_manhattanLife * .5);
+    textSize(25);
+    text(lower_manhattan,xPos, yPos + textYPos);
   }
   
 }
