@@ -77,7 +77,7 @@ String east_harlem = "EAST HARLEM : \nTotal NOx Emissions = 55.8";
 String upperW = "UPPER WEST SIDE : \nTotal NOx Emissions = 247.9";
 String upperE = "UPPER EAST SIDE : \nTotal NOx Emissions = 269.8";
 String chelsea = "CHELSEA : \nTotal NOx Emissions = 204.8";
-String gramercy_murray = "GRAMERCY MURRAY : \nTotal NOx Emissions = 284.7";
+String gramercy_murray = "GRAMERCY MURRAY : \nTotal NOx Emissions = 284.7 \n veryUnhealthy";
 String greenwich = "GREENWICH VILLAGE : \nTotal NOx Emissions = 132.5";
 String union = "UNION SQUARE : \nTotal NOx Emissions = 126.1";
 String lower_manhattan = "LOWER MANHATTAN : \nTotal NOx Emissions = 118.7";
