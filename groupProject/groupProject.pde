@@ -504,73 +504,73 @@ void showingPercentageBox(){
   if(overBronx == true){
     fill(good);
     rect(xPos + 125, yPos +36, 96, bronxLife * .5);
-    textSize(30);
+    textSize(25);
     text(bronx,xPos, yPos + textYPos);
   }
   if(overBrooklyn == true){
     fill(good);
     rect(xPos + 125, yPos + 45, 96, brooklynLife * .5);
-    textSize(30);
+    textSize(25);
     text(brooklyn,xPos, yPos + textYPos);
   }
   if(overQueens == true){
     fill(good);
     rect(xPos + 125, yPos + 49, 96, queensLife * .5);
-    textSize(30);
+    textSize(25);
     text(queens,xPos, yPos + textYPos);
   }
   if(overCentralHarlem == true){
     fill(moderate);
     rect(xPos + 125, yPos + 15, 96, central_harlemLife * .5);
-    textSize(30);
+    textSize(25);
     text(central_harlem,xPos, yPos + textYPos);
   }
   if(overEastHarlem == true){
     fill(moderate);
     rect(xPos + 125, yPos + 29, 96, east_harlemLife * .5);
-    textSize(30);
+    textSize(25);
     text(east_harlem,xPos, yPos + textYPos);
   }
   if(overUpperWestSide == true){
     fill(veryUnhealthy);
     rect(xPos + 125, yPos - 65, 96, upperWLife * .5);
-    textSize(30);
+    textSize(25);
     text(upperW,xPos, yPos + textYPos);
   }
   if(overUpperEastSide == true){
     fill(veryUnhealthy);
     rect(xPos + 125, yPos - 77, 96, upperELife * .5);
-    textSize(30);
+    textSize(25);
     text(upperE,xPos, yPos + textYPos);
   }
   if(overChelsea == true){
     fill(veryUnhealthy);
     rect(xPos + 125, yPos - 45, 96, chelseaLife * .5);
-    textSize(30);
+    textSize(25);
     text(chelsea,xPos, yPos + textYPos);
   }
   if(overGramercyMurray == true){
     fill(veryUnhealthy);
     rect(xPos + 125, yPos - 85, 96,  gramercy_murrayLife * .5);
-    textSize(30);
+    textSize(25);
     text(gramercy_murray,xPos, yPos + textYPos);
   }
   if(overGreenwichVillage == true){
     fill(unhealthyForSensitiveGroups);
     rect(xPos + 125, yPos - 9, 96, greenwich_sohoLife * .5);
-    textSize(30);
+    textSize(25);
     text(greenwich,xPos, yPos + textYPos);
   }
   if(overUnionSquare == true){
     fill(unhealthyForSensitiveGroups);
     rect(xPos + 125, yPos - 6, 96, union_lowerELife * .5);
-    textSize(30);
+    textSize(25);
     text(union,xPos, yPos + textYPos);
   }
   if(overLowerManhattan == true){
     fill(unhealthyForSensitiveGroups);
     rect(xPos + 125, yPos - 2, 96, lower_manhattanLife * .5);
-    textSize(30);
+    textSize(25);
     text(lower_manhattan,xPos, yPos + textYPos);
   }
   
