@@ -37,19 +37,6 @@ boolean overGreenwichVillage = false;
 boolean overUnionSquare = false;
 boolean overLowerManhattan = false;
 
-//float bronxPercentage = 0;
-//float brooklynPercentage = 0;
-//float queensPercentage = 0;
-//float centralHarlemPercentage = 0;
-//float eastHarlemPercentage = 0;
-//float upperWestSidePercentage = 0;
-//float upperEastSidePercentage = 0;
-//float chelseaPercentage = 0;
-//float gramercyMurrayPercentage = 0;
-//float greenwichVillagePercentage = 0;
-//float unionSquarePercentage = 0;
-//float lowerManhattanPercentage = 0;
-
 PImage NYMap;
 
 ArrayList<Pollution> pollutions;
@@ -159,54 +146,6 @@ void setup() {
   unhealthy = color(#fc0d1b);
   veryUnhealthy = color(#8e4295);
   harzardous = color(#7d0425);
-
-    //for (TableRow row : airData.rows()) {
-
-    ////int id = row.getInt("EventID");
-    //float data = row.getFloat("data_");
-
-
-    //switch(data) {
-    //case "Bronx":
-    //  bronxPercentage++;
-    //  break;
-    //case "Brooklyn":
-    //  brooklynPercentage++;
-    //  break;
-    //case "Queens":
-    //  queensPercentage++;
-    //  break;
-    //case "Central Harlem":
-    //  centralHarlemPercentage++;
-    //  break;
-    //case "East Harlem":
-    //  eastHarlemPercentage++;
-    //  break;
-    //case "Upper West Side":
-    //  upperWestSidePercentage++;
-    //  break;
-    //case "Upper East Side":
-    //  upperEastSidePercentage++;
-    //  break;
-    //case "Chelsea":
-    //  chelseaPercentage++;
-    //  break;
-    //case "Gramercy Murray":
-    //  gramercyMurrayPercentage++;
-    //  break;
-    //case "Greenwich Village":
-    //  greenwichVillagePercentage++;
-    //  break;
-    //case "Union Square":
-    //  unionSquarePercentage++;
-    //  break;
-    //case "Lower Manhattan":
-    //  lowerManhattanPercentage++;
-    //  break;
-    //}
-    
-    
-  // }
 
 //____________________________________________________________region PShapes
   Bronx_Shape = createShape();

@@ -23,13 +23,13 @@ class Letter
   
   void display() {
     noStroke();
-    fill(map(life, 50, 100, 100, 0));
+    fill(map(life, 50, 100, 150, 0));
     text(letter, posX, posY);
   }
   
   void update() {
     alpha -= 20;
-    life = life - 5;
+    life = life - 10;
     this.posX += this.velX;
     this.posY += this.velY;
   }
