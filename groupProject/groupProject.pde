@@ -56,18 +56,18 @@ float bronxLife, brooklynLife, queensLife, central_harlemLife, east_harlemLife, 
 float bronxAPH, brooklynAPH, queensAPH, central_harlemAPH, east_harlemAPH, upperWAPH, upperEAPH, chelseaAPH, gramercy_murrayAPH, greenwich_sohoAPH, union_lowerEAPH, lower_manhattanAPH;
 String instruction = "Drag The Needle To See Details";
 
-String bronx = "BRONX : \nTotal NOx Emissions = 42.7 \n Good";
-String brooklyn = "BROOKLYN : \nTotal NOx Emissions = 22.8 \n Good";
-String queens = "QUEENS : \nTotal NOx Emissions = 16.1 \n Good";
-String central_harlem = "CENTRAL HARLEM : \nTotal NOx Emissions = 82.1 \n Moderate";
-String east_harlem = "EAST HARLEM : \nTotal NOx Emissions = 55.8 \n Moderate";
-String upperW = "UPPER WEST SIDE : \nTotal NOx Emissions = 247.9 \n Very Unhealthy";
-String upperE = "UPPER EAST SIDE : \nTotal NOx Emissions = 269.8 \n Very Unhealthy";
-String chelsea = "CHELSEA : \nTotal NOx Emissions = 204.8 \n Very Unhealthy";
-String gramercy_murray = "GRAMERCY MURRAY : \nTotal NOx Emissions = 284.7 \n Very Unhealthy";
-String greenwich = "GREENWICH VILLAGE : \nTotal NOx Emissions = 132.5 \n Unhealthy for Sensitive Groups";
-String union = "UNION SQUARE : \nTotal NOx Emissions = 126.1 \n Unhealthy for Sensitive Groups";
-String lower_manhattan = "LOWER MANHATTAN : \nTotal NOx Emissions = 118.7 \n Unhealthy for Sensitive Groups";
+String bronx = "BRONX : \nTotal NOx Emissions = 42.7 \nGood";
+String brooklyn = "BROOKLYN : \nTotal NOx Emissions = 22.8 \nGood";
+String queens = "QUEENS : \nTotal NOx Emissions = 16.1 \nGood";
+String central_harlem = "CENTRAL HARLEM : \nTotal NOx Emissions = 82.1 \nModerate";
+String east_harlem = "EAST HARLEM : \nTotal NOx Emissions = 55.8 \nModerate";
+String upperW = "UPPER WEST SIDE : \nTotal NOx Emissions = 247.9 \nVery Unhealthy";
+String upperE = "UPPER EAST SIDE : \nTotal NOx Emissions = 269.8 \nVery Unhealthy";
+String chelsea = "CHELSEA : \nTotal NOx Emissions = 204.8 \nVery Unhealthy";
+String gramercy_murray = "GRAMERCY MURRAY : \nTotal NOx Emissions = 284.7 \nVery Unhealthy";
+String greenwich = "GREENWICH VILLAGE : \nTotal NOx Emissions = 132.5 \nUnhealthy for Sensitive Groups";
+String union = "UNION SQUARE : \nTotal NOx Emissions = 126.1 \nUnhealthy for Sensitive Groups";
+String lower_manhattan = "LOWER MANHATTAN : \nTotal NOx Emissions = 118.7 \nUnhealthy for Sensitive Groups";
 
 color good, moderate, unhealthyForSensitiveGroups, unhealthy, veryUnhealthy, harzardous;
 
